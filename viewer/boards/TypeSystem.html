@@ -1,0 +1,71 @@
+<!-- @dsCard page group="01 Master Identity" height=2669 width=1200 subtitle="Thmanyah Sans display · IBM Plex Sans Arabic · Archivo · IBM Plex Sans · IBM Plex Mono" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Typography</title><style>body{margin:0}
+.fam{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);margin-bottom:26px}
+.fam>div{padding:16px 18px 18px 0;border-right:1px solid var(--rule);margin-right:18px}
+.fam>div:nth-child(3n){border-right:0}
+.fam .role{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.fam .nm{font-size:22px;font-weight:600;margin:6px 0 8px}
+.fam .why{font-size:12.5px;line-height:1.55;color:var(--ink-muted)}
+.fam .spec{font-size:44px;margin-top:10px;line-height:1.2}
+.rules{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · typography</div>
+  <h2 class="hg-h">Type is the loudest part of the brand.</h2>
+  <p class="hg-p">Thmanyah is used ONLY as the Arabic display face, in its Sans cut, heavy weights, for Level 01 headlines. It never carries body text, labels or English. Everything around it — Plex Arabic text, Archivo numerals, Plex Mono index labels, the Square Stop, the Strike, blue/black Fields — is what makes the result read as Gouraan and not as the foundry's own media brand. Every Arabic headline on these boards is set in the real Thmanyah Sans files; everything smaller than a headline is IBM Plex Sans Arabic.</p>
+
+  <div class="fam">
+    <div><div class="role">AR 01 · Display</div><div class="nm">Thmanyah Sans — Bold 700 / Black 900</div><div class="spec d" style="direction:rtl;text-align:right">حسام جعران</div><div class="why">Contemporary, confident Arabic with calligraphic memory. Heavy weights hold at thumbnail size. Sans only — the Serif Display cut is the one most associated with Thmanyah's own brand, so it is excluded.</div></div>
+    <div><div class="role">AR 02/03 · Secondary + Body + UI</div><div class="nm">IBM Plex Sans Arabic — 400–700</div><div class="spec t" style="direction:rtl;text-align:right;font-weight:700">أبني وأجرّب وأسأل</div><div class="why">Rational, engineered, very readable at 14–22 px. Its Latin sibling (Plex Sans / Plex Mono) gives mixed-language lines a single rhythm — the "systems thinker" voice.</div></div>
+    <div><div class="role">EN 01 · Display + Numerals</div><div class="nm">Archivo — 800, width 87.5</div><div class="spec en" style="font-size:44px">Build. Question.</div><div class="why">A grotesque with real editorial bite and a width axis: semi-condensed headlines and giant episode numerals (01–100) that sit well next to heavy Arabic without shouting "tech".</div></div>
+    <div><div class="role">EN 02/03 · Text</div><div class="nm">IBM Plex Sans — 400–600</div><div class="spec ent" style="font-size:36px">Strategy is a choice.</div><div class="why">The Latin partner of the Arabic body face. Used for LinkedIn copy, website EN and subtitles in English.</div></div>
+    <div><div class="role">META · Index / numbers</div><div class="nm">IBM Plex Mono — 500</div><div class="spec mono" style="font-size:28px;text-align:left">04 / 100 · 14 MIN</div><div class="why">The builder's notebook voice. Every episode marker, source line, timestamp and the Index Tab. Uppercase, +8 % tracking, Western digits.</div></div>
+    <div><div class="role">Not used</div><div class="nm" style="color:var(--ink-muted)">Thmanyah Serif · Cairo · Tajawal · Inter · Space Grotesk</div><div class="why">Serif = someone else's brand. Cairo/Tajawal = default Arabic web look. Inter/Space Grotesk = generic startup / AI cliché.</div></div>
+  </div>
+
+  <div class="hg-kicker">Thmanyah Sans — the real family, five weights</div>
+  <div id="weights" style="margin-bottom:26px"></div>
+  <div class="hg-kicker">Hierarchy on a 1920 × 1080 specimen</div>
+  <div id="spec" style="margin-bottom:26px"></div>
+
+  <div class="hg-kicker">Mixed Arabic + English</div>
+  <div class="hg-row" id="mix"></div>
+
+  <div class="rules">
+    <ul class="hg-spec"><li><b>Scale ratio</b> ≈ 1.7 between levels: 160 → 96 → 56 → 32 → 22 → 18 → 14 (Arabic, px at 1920/1280).</li><li><b>Line height</b> Arabic display 1.08–1.15; Arabic text 1.6–1.85 (dots and marks need room); English display 0.92–0.96; English text 1.5–1.6.</li><li><b>Tracking</b> Arabic always 0 — never letter-space Arabic. English display −2 %; mono +8 %.</li></ul>
+    <ul class="hg-spec"><li><b>Arabic alignment</b> right, ragged left. Never centred except the one-line end card. Never justified (kashida stretching is banned).</li><li><b>English alignment</b> left, ragged right, in its own LTR block.</li><li><b>Line breaks</b> are written by hand on display lines: 1–3 words per line, never break a phrase that belongs together.</li></ul>
+    <ul class="hg-spec"><li><b>Mixed lines</b> an English word inside an Arabic headline (AI, CEO, MVP) is set in the SAME display face at the same size — no switch to Archivo mid-line.</li><li><b>Numbers</b> Western digits everywhere (01, 90, 2026) for one visual system across languages; always two digits for episodes.</li><li><b>Diacritics</b> only where a word would be misread (المسلَّمات).</li></ul>
+  </div>
+</div>
+<script>
+var sp = '<div class="f f-black" style="left:0;right:0"></div>'
+ + '<div style="position:absolute;right:96px;top:80px;width:1180px">'
+ +   '<div style="display:flex;justify-content:space-between;align-items:center"><span class="tab b" style="font-size:22px">04 / 100</span><span class="mono" style="font-size:18px;color:var(--grey-400)">L05 · META — IBM PLEX MONO 22</span></div>'
+ +   '<h1 class="d" style="font-size:170px;margin-top:40px">إنت بقيت <span class="mk">الـBottleneck</span></h1>'
+  +   '<div class="d8" style="font-size:70px;margin-top:34px">كل حاجة في الشركة بترجع لك</div>'
+  +   '<div class="t" style="font-size:36px;font-weight:700;margin-top:26px;color:var(--brand-blue-soft)">وإنت خدت يومين إجازة</div>'
+  +   '<p class="t" style="font-size:24px;line-height:1.8;margin-top:22px;color:var(--grey-400);max-width:980px">Finance مستنيك. Operations مستنياك. الـTeam مستني موافقتك. فجأة الشركة كلها خدت يومين إجازة معاك.</p>'
+  +   '<div style="display:flex;gap:26px;align-items:center;margin-top:30px"><span class="mono" style="font-size:20px;color:var(--grey-400)">SOURCE · REPORT, YEAR</span><span class="t" style="font-size:24px;font-weight:600;color:var(--brand-blue-bright)">حلقة مرتبطة: 02 / 100</span></div>'
+ + '</div>'
+ + '<div class="num" style="position:absolute;left:96px;top:60px;font-size:400px;color:var(--brand-blue)">04</div>'
+ + '<div style="position:absolute;left:96px;bottom:90px;direction:ltr"><div class="en" style="font-size:84px">You became the bottleneck.</div><div class="ent" style="font-size:24px;color:var(--grey-400);margin-top:14px">Episode 04 of 100 — English support line</div></div>'
+ + '<div class="mono" style="position:absolute;right:96px;bottom:90px;font-size:16px;color:var(--grey-400);text-align:right;line-height:2">L01 DISPLAY 190 / 900<br>L02 TITLE 70 / 700<br>L03 SUBTITLE 36 / 700 · BODY 24 / 400<br>LABEL · HASHTAG 22</div>';
+HG.mount('#spec', HG.ab(1920,1080,1136/1920,sp));
+var wt = '<div class="f f-black" style="left:0;right:0"></div>';
+[[900,'BLACK 900 · L01 HEADLINES, THUMBNAILS, SEASON TITLES','شركتك مش محتاجة',1],[700,'BOLD 700 · L02 TITLES, QUOTES, CHAPTERS','لماذا نصدّقها؟',1],[500,'MEDIUM 500 · OVERSIZED QUIET STATEMENTS ONLY','الفكرة رخيصة',.55],[400,'REGULAR 400 · NOT FOR BODY — USE PLEX ARABIC','حسام جعران',.4],[300,'LIGHT 300 · RARE, 120 PX+','أبني وأجرّب',.4]].forEach(function(r,i){
+  wt += '<div style="position:absolute;right:96px;left:96px;top:'+(60+i*176)+'px;height:176px;border-top:'+(i?'2px solid var(--grey-700)':'0')+';display:flex;justify-content:space-between;align-items:center;opacity:'+(r[3]<1?.62:1)+'"><span class="d" style="font-weight:'+r[0]+';font-size:118px;line-height:1.3">'+r[2]+'</span><span class="mono" style="font-size:20px;color:'+(r[3]<1?'var(--grey-400)':'var(--brand-blue-bright)')+'">'+r[1]+'</span></div>';
+});
+HG.mount('#weights', HG.ab(1920,960,1136/1920,wt));
+var mx = [
+ ['AR lead · EN inside','<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:70px;left:70px;top:90px"><div class="mono" style="font-size:26px;color:var(--white)">HOSSAM GOURAAN — NOTES</div><h1 class="d" style="font-size:118px;margin-top:210px">الـ MVP مش<br>منتج ناقص</h1><div class="ent" style="font-size:34px;margin-top:40px;text-align:left;color:var(--white)">An MVP is a question, not a small product.</div></div>'],
+ ['EN lead · AR support','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;left:70px;right:70px;top:90px;direction:ltr"><div class="mono" style="font-size:26px;color:var(--brand-blue-bright)">STRATEGY — 03</div><div class="en" style="font-size:118px;margin-top:210px">Systems<br>beat heroes.</div><div class="t" style="font-size:40px;font-weight:700;margin-top:40px;direction:rtl;text-align:left">الأنظمة تهزم الأبطال</div></div>'],
+ ['Bilingual caption row','<div class="f f-navy" style="left:0;right:0"></div><div style="position:absolute;left:70px;right:70px;bottom:120px"><div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:4px solid var(--brand-blue-bright);padding-top:30px"><div class="d8" style="font-size:64px">التحوّل الرقمي</div><div class="en" style="font-size:52px;color:var(--brand-blue-soft)">Digital transformation</div></div><div class="mono" style="font-size:22px;margin-top:24px;color:var(--brand-blue-soft);text-align:right">DEFINITION · 02</div></div>']
+];
+var m=''; mx.forEach(function(x){ m+='<div>'+HG.ab(1080,1080,362/1080,x[1])+'<div class="hg-cap"><b>'+x[0]+'</b></div></div>'; });
+HG.mount('#mix',m);
+</script>
+</body>
+</html>

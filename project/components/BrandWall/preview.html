@@ -1,0 +1,45 @@
+<!-- @dsCard page group="05 System" height=1402 width=1200 subtitle="The master wall — no season anywhere — then the same wall with Season 01 on top" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Brand wall</title><style>body{margin:0}
+.wall{position:relative;width:1136px;height:880px;background:var(--black);overflow:hidden}
+.wall2{position:relative;width:1136px;height:330px;background:var(--black);overflow:hidden}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">05 — System · final brand wall</div>
+  <h2 class="hg-h">This is Hossam Gouraan, with no season in the room.</h2>
+  <div class="wall" id="w"></div>
+  <div class="hg-kicker" style="margin-top:26px">The same brand in Season 01</div>
+  <div class="wall2" id="w2"></div>
+</div>
+<script>
+var A=HG.assets, P=function(x,y,w,h,sc,inner){ return '<div style="position:absolute;left:'+x+'px;top:'+y+'px">'+HG.ab(w,h,sc,inner)+'</div>'; };
+var h='';
+h+=P(8,8,2560,1440,560/2560,A.ytBanner({done:4}));
+h+=P(576,8,1280,720,272/1280,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['شركتك مش محتاجة','<span class="mk">موظفين أكتر</span>'],tab:'04 / 100'}));
+h+=P(856,8,1280,720,272/1280,HG.thumb({tpl:'C',photo:'p3',lines:['إنت بقيت','الـBottleneck']}));
+h+=P(576,169,1280,720,272/1280,HG.thumb({tpl:'B',photo:'p2',field:'blue',lines:['ارسم','<span class="mk">الـworkflow</span> الأول']}));
+h+=P(856,169,1280,720,272/1280,HG.thumb({tpl:'A',photo:'p3',field:'black',lines:['المكتب','<span class="hi">مش غلط</span>'],tab:'12 / 100'}));
+h+=P(8,331,1080,1920,152/1080,A.reel({photo:'p3',tab:'04 / 100',lines:['إنت بقيت','<span class="mk">الـBottleneck</span>']}));
+h+=P(168,331,1080,1350,216/1080,A.carouselCover({ground:'blue',lines:['قبل الأداة','رقم 16'],topic:'SYSTEMS'}));
+h+=P(392,331,1080,1350,216/1080,A.card({quote:true,text:'الخطط لا قيمة لها، لكن التخطيط هو كل شيء.',by:'دوايت أيزنهاور'}));
+h+=P(616,331,1440,900,512/1440,A.web({done:4}));
+h+=P(616,659,1584,396,512/1584,A.liCover({done:4}));
+h+=P(168,609,1080,1350,216/1080,A.table({title:'قبل ما تعيّن',rows:[['السؤال','لو لأ'],['فاهم المطلوب؟','التعريف'],['عنده authority؟','الصلاحيات'],['الـworkflow واضح؟','النظام']],size:80,source:'FROM EPISODE 04 / 100'}));
+h+=P(392,609,1080,1350,216/1080,A.card({ground:'black',tab:'INSIGHT',text:'ساعات بنلوم الموظف قبل ما نراجع <span class="mk">النظام</span>.',size:92}));
+h+=P(8,609,1080,1920,152/1080,A.reel({tab:'12 / 100',lines:['المكتب','مش غلط']}));
+h+=P(616,797,1920,1080,146/1920,A.vg('lower'));
+h+=P(770,797,1920,1080,146/1920,A.vg('revised'));
+h+=P(924,797,1920,1080,146/1920,A.vg('question'));
+HG.mount('#w',h);
+var g='';
+g+=P(8,8,1920,1080,560/1920,A.seasonCover());
+g+=P(576,8,1280,720,272/1280,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'],tab:'S01 · 08 / 100'}));
+g+=P(856,8,1280,720,272/1280,HG.thumb({tpl:'B',photo:'p2',field:'blue',lines:['خبرتك','<span class="s brk">كفاية</span> تقرر'],tab:'S01 · 15 / 100'}));
+g+=P(576,169,1280,720,272/1280,HG.thumb({tpl:'C',photo:'p3',lines:['الخطة','<span class="s brk">واقعية</span>'],tab:'S01 · 11 / 100'}));
+g+=P(856,169,1920,1080,272/1920,A.vg('lower').replace('04 / 100','S01 · 08 / 100'));
+HG.mount('#w2',g);
+</script>
+</body>
+</html>

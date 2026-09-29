@@ -1,0 +1,45 @@
+<!-- @dsCard page group="01 Master Identity" height=1415 width=1200 subtitle="A typographic signature, not a logo: Arabic primary, English support, Gouraan alone" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Name signature</title><style>body{margin:0}
+.lvl{display:grid;grid-template-columns:150px 1fr 330px;gap:24px;align-items:center;border-top:1px solid var(--rule);padding:18px 0}
+.lvl .k{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.lvl .u{font-size:13px;color:var(--ink-muted);line-height:1.5}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · name</div>
+  <h2 class="hg-h">The name is the mark.</h2>
+  <p class="hg-p">No symbol. The signature is the Arabic name set in the display face, closed by the Square Stop — a solid blue square the size of an Arabic dot. The square is <b style="color:var(--ink)">one unit of the journey</b>: one episode, one question, one square in the 100 grid. It is not a "final word"; Hossam isn't positioned as someone with final answers (Master Strategy §6). It reappears as the bullet, the Tab square and the grid cell.</p>
+
+  <div id="master" style="margin-bottom:26px"></div>
+
+  <div class="lvl"><div class="k">Primary<br>Arabic signature</div><div id="l1"></div><div class="u">حسام جعران + Square Stop. Display face, 900. Stop = 0.2 em, sits on the baseline, 0.07 em after the last letter. Website header, end cards, cover of every season, carousel final slide.</div></div>
+  <div class="lvl"><div class="k">English<br>representation</div><div id="l2"></div><div class="u">Hossam Gouraan in Archivo 800, semi-condensed, tight. Upper-case mono version (HOSSAM GOURAAN) for metadata and lower thirds only. Never set the English name in an Arabic face.</div></div>
+  <div class="lvl"><div class="k">Bilingual<br>lockup</div><div id="l3"></div><div class="u">Lead language on top at full size; the second language below in mono at 16–18 % of the lead size, aligned to the lead's starting edge (right for Arabic, left for English). Never side by side.</div></div>
+  <div class="lvl"><div class="k">Short form<br>Gouraan alone</div><div id="l4"></div><div class="u">Only where the full name is already implied: handle (@gouraan), URL, video watermark, favicon text, merch labels. Arabic short form جعران■ for Arabic-only small spaces. Never "Gouraan" as a headline.</div></div>
+  <div class="lvl"><div class="k">Profile /<br>avatar</div><div id="l5"></div><div class="u">The avatar is always the face — chest-up, black T-shirt, blue ground. No monogram avatars. The Stop never goes on top of the photo.</div></div>
+</div>
+<script>
+var m = '<div class="f f-black" style="left:0;right:0"></div>'
+ + '<div class="f f-blue" style="left:0;width:44%"></div>'
+ + '<div style="position:absolute;right:96px;top:150px"><h1 class="d" style="font-size:150px">حسام جعران<span class="stop"></span></h1>'
+ + '<div class="mono" style="font-size:36px;margin-top:26px;text-align:right">HOSSAM GOURAAN</div></div>'
+ + '<div class="on-blue" style="position:absolute;left:96px;top:120px;direction:ltr"><div class="en" style="font-size:104px;text-align:left">Hossam<br>Gouraan<span class="stop"></span></div></div>'
+ + '<div class="mono" style="position:absolute;left:96px;bottom:70px;font-size:22px">EN · SECONDARY</div>'
+ + '<div class="mono" style="position:absolute;right:96px;bottom:70px;font-size:22px;color:var(--grey-400)">AR · PRIMARY</div>';
+HG.mount('#master', HG.ab(1920,600,1136/1920,m));
+var box = function(w,h,inner,bg){ return HG.ab(w,h,1,'<div class="f '+(bg||'f-black')+'" style="left:0;right:0"></div>'+inner); };
+HG.mount('#l1', box(560,120,'<div style="position:absolute;right:24px;top:18px"><h1 class="d" style="font-size:64px">حسام جعران<span class="stop"></span></h1></div>')
+ + ' ' );
+HG.mount('#l2', '<div style="display:flex;gap:12px">'+box(290,120,'<div class="en" style="position:absolute;left:22px;top:40px;font-size:33px;white-space:nowrap">Hossam Gouraan</div>')+box(250,120,'<div class="mono" style="position:absolute;left:22px;top:50px;font-size:17px">HOSSAM GOURAAN</div>','f-blue')+'</div>');
+HG.mount('#l3', '<div style="display:flex;gap:12px">'+box(290,130,'<div style="position:absolute;right:22px;top:16px"><div class="d" style="font-size:44px">حسام جعران<span class="stop"></span></div><div class="mono" style="font-size:12px;margin-top:10px;text-align:right">HOSSAM GOURAAN</div></div>')+box(250,130,'<div style="position:absolute;left:22px;top:22px;direction:ltr"><div class="en" style="font-size:27px;white-space:nowrap">Hossam Gouraan<span class="stop"></span></div><div class="t" style="font-size:15px;font-weight:700;margin-top:10px;direction:rtl;text-align:left">حسام جعران</div></div>','f-blue')+'</div>');
+HG.mount('#l4', '<div style="display:flex;gap:12px">'+box(170,120,'<div class="en" style="position:absolute;left:20px;top:42px;font-size:32px;white-space:nowrap">GOURAAN<span class="stop"></span></div>')+box(150,120,'<div style="position:absolute;right:20px;top:26px"><div class="d" style="font-size:44px">جعران<span class="stop"></span></div></div>')+box(210,120,'<div class="mono" style="position:absolute;left:20px;top:34px;font-size:16px;line-height:1.8;color:var(--white)">@GOURAAN<br><span style="color:var(--brand-blue-bright)">GOURAAN.COM</span></div>','f-navy')+'</div>');
+HG.mount('#l5', '<div style="display:flex;gap:14px;align-items:center">'
+ + '<div style="width:110px;height:110px;border-radius:9999px;overflow:hidden;position:relative;background:var(--brand-blue)">'+HG.portrait({photo:'p2',cut:true,w:110,h:110,head:.5,top:.12,cx:.5,box:false})+'</div>'
+ + '<div style="width:110px;height:110px;border-radius:9999px;overflow:hidden;position:relative">'+HG.portrait({photo:'p1',w:110,h:110,head:.55,top:.1,cx:.5,box:false})+'</div>'
+ + '<div style="width:64px;height:64px;border-radius:9999px;overflow:hidden;position:relative;background:var(--brand-blue)">'+HG.portrait({photo:'p2',cut:true,w:64,h:64,head:.55,top:.1,cx:.5,box:false})+'</div>'
+ + '<div style="width:36px;height:36px;border-radius:9999px;overflow:hidden;position:relative;background:var(--brand-blue)">'+HG.portrait({photo:'p2',cut:true,w:36,h:36,head:.6,top:.08,cx:.5,box:false})+'</div></div>');
+</script>
+</body>
+</html>

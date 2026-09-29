@@ -1,0 +1,38 @@
+<!-- @dsCard page group="00 Architecture" height=970 width=1200 subtitle="The key test: remove تكسير المسلّمات, the Strike and S01 — is it still unmistakably Hossam Gouraan?" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Key test</title><style>body{margin:0}
+.pair{display:grid;grid-template-columns:150px 1fr 1fr;gap:18px;align-items:start;border-top:1px solid var(--rule);padding:14px 0}
+.pair .k{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px}
+.head{display:grid;grid-template-columns:150px 1fr 1fr;gap:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;margin-bottom:6px}
+.head span:nth-child(2){color:var(--ink-muted)}
+.head span:nth-child(3){color:var(--accent-ink)}
+.cellrow{display:flex;gap:12px;align-items:flex-end}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">00 — Architecture · the key test</div>
+  <h2 class="hg-h">Take Season 01 away. It's still Hossam.</h2>
+  <p class="hg-p">Left: with the Season 01 layer. Right: the same pieces with تكسير المسلّمات, the Strike and the S01 prefix removed. What's left carries the recognition on its own: his face in the black T-shirt, the blue/black Field meeting the photo at a hard seam, a Thmanyah Sans headline, the Mark, the mono journey count. In V1 the right column didn't exist, because the Strike was doing the master's job.</p>
+  <div class="head"><span></span><span>WITH SEASON 01 LAYER</span><span>SEASON 01 REMOVED · MASTER ONLY</span></div>
+  <div id="rows"></div>
+</div>
+<script>
+var A=HG.assets, S=260/1280;
+var rows=[
+ ['Thumbnail',
+  HG.ab(1280,720,S,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'],tab:'S01 · 08 / 100'}))+HG.ab(1280,720,S,HG.thumb({tpl:'C',photo:'p3',lines:['الخطة','<span class="s brk">واقعية</span>'],tab:'S01 · 11 / 100'})),
+  HG.ab(1280,720,S,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['شركتك مش محتاجة','<span class="mk">موظفين أكتر</span>'],tab:'04 / 100'}))+HG.ab(1280,720,S,HG.thumb({tpl:'C',photo:'p3',lines:['إنت بقيت','الـBottleneck'],tab:'03 / 100'}))],
+ ['Reel cover · carousel',
+  HG.ab(1080,1920,120/1080,A.reel({photo:'p3',tab:'S01 · 08 / 100',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل']}))+HG.ab(1080,1350,170/1080,A.carouselCover({ground:'blue',lines:['خبرتك','<span class="s brk">كفاية</span>'],tab:'01 / 06',topic:'S01'})),
+  HG.ab(1080,1920,120/1080,A.reel({photo:'p3',tab:'04 / 100',lines:['إنت بقيت','<span class="mk">الـBottleneck</span>']}))+HG.ab(1080,1350,170/1080,A.carouselCover({ground:'blue',lines:['ارسم','<span class="mk">الـworkflow</span> الأول'],tab:'01 / 06',topic:'SYSTEMS'}))],
+ ['Name ID · cover',
+  HG.ab(1920,1080,S*1280/1920,A.vg('lower').replace('04 / 100','S01 · 08 / 100'))+HG.ab(1920,1080,S*1280/1920,A.seasonCover()),
+  HG.ab(1920,1080,S*1280/1920,A.vg('lower'))+HG.ab(1440,900,S*1280/1440,A.web({done:4}))]
+];
+var h=''; rows.forEach(function(r){ h+='<div class="pair"><div class="k">'+r[0]+'</div><div class="cellrow">'+r[1]+'</div><div class="cellrow">'+r[2]+'</div></div>'; });
+h+='<div class="pair"><div class="k">Verdict</div><div style="font-size:13px;color:var(--ink-muted);line-height:1.6">Season 01 adds a sharp, specific gesture. It works for 20 episodes and it can retire.</div><div style="font-size:13px;line-height:1.6"><b>Passes.</b> Recognition comes from person + photo world + Field/seam + Thmanyah + Mark + journey count, and none of those belong to a season. Season 02 can bring a completely different idea into the same slot.</div></div>';
+HG.mount('#rows',h);
+</script>
+</body>
+</html>

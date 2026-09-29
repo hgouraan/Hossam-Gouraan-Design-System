@@ -1,0 +1,41 @@
+<!-- @dsCard page group="02 Master Content Language" height=780 width=1200 subtitle="9:16 — title frame, captions, keyword, safe areas, series marker, end card" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Short form</title><style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · short form</div>
+  <h2 class="hg-h">Vertical is its own layout.</h2>
+  <p class="hg-p">Reels, Shorts and TikTok are not a shrunk YouTube frame. The seam rotates: Hossam in the top half (eyes at ~30 % height), a black Field rising from below for the title in the first second, then captions take over in the lower-middle band. Everything important stays inside the safe window: 240 px clear at the top, 440 px at the bottom, 140 px on the right (action buttons).</p>
+  <div class="hg-row" id="v" style="gap:18px"></div>
+  <div class="hg-row">
+    <ul class="hg-spec" style="width:540px">
+      <li><b>Title frame</b> 0–1.2 s. Display 150–170 px, max 2 lines, black Field from 1000 px down. Index Tab at the top of the safe window.</li>
+      <li><b>Captions</b> Plex Sans Arabic 700, 64 px, white, max 2 lines, 3–5 words per card. No outlines, no drop shadows: a solid black box behind the line when the background is busy.</li>
+      <li><b>Keyword</b> one word per clip may jump to display 900 on a blue block — same as long-form A.</li>
+    </ul>
+    <ul class="hg-spec" style="width:540px">
+      <li><b>Series marker</b> the Index Tab with the journey count (04 / 100), with a season prefix during a season. It stays for the first 3 s only; clips from extra content carry none.</li>
+      <li><b>End card</b> 1.5 s, blue Field, the takeaway + signature. No "follow for more" stickers; the platform has its own button.</li>
+      <li><b>Cover</b> uses the same title frame so the grid reads as one series (see Social → Reel covers).</li>
+    </ul>
+  </div>
+</div>
+<script>
+var W=1080,H=1920,s=172/1080;
+var top=HG.portrait({photo:'p2',w:W,h:1100,head:.3,top:.24,cx:.5});
+var safe='<div class="sz-no" style="left:0;right:0;top:0;height:240px"></div><div class="sz-no" style="left:0;right:0;bottom:0;height:440px"></div><div class="sz-no" style="right:0;top:240px;bottom:440px;width:140px"></div><div class="sz" style="left:64px;right:140px;top:240px;bottom:440px"></div><div class="sz-l" style="left:70px;top:190px;font-size:28px">SAFE TOP 240</div><div class="sz-l" style="left:70px;bottom:390px;font-size:28px">SAFE BOTTOM 440</div>';
+var cap=function(t,kw){ return '<div style="position:absolute;left:140px;right:180px;top:1180px;text-align:center"><div class="t" style="font-size:64px;font-weight:700;line-height:1.5;display:inline;background:var(--black);padding:6px 18px;box-decoration-break:clone;-webkit-box-decoration-break:clone">'+t+'</div></div>'; };
+var F=[
+ ['Title frame', top+'<div class="f f-black" style="top:1000px;left:0;right:0"></div><div style="position:absolute;right:180px;left:64px;top:1060px"><h1 class="d" style="font-size:136px;line-height:1.12">ارسم الـworkflow<br><span class="hi">الأول</span></h1></div><div style="position:absolute;top:260px;right:180px;font-size:34px"><span class="tab b">12 / 100</span></div>'],
+ ['Captions', HG.portrait({photo:'p2',w:W,h:H,head:.2,top:.2,cx:.55})+cap('قبل ما تجرب الأداة رقم 16')],
+ ['Keyword emphasis', HG.portrait({photo:'p2',w:W,h:H,head:.2,top:.2,cx:.55})+'<div style="position:absolute;right:180px;top:1150px;background:var(--brand-blue);padding:10px 40px 30px"><h1 class="d" style="font-size:170px">الـworkflow</h1></div>'+cap('ارسم الـworkflow الأول').replace('top:1180px','top:1420px')],
+ ['Safe areas', HG.portrait({photo:'p2',w:W,h:H,head:.2,top:.2,cx:.55})+safe],
+ ['Journey marker', top+'<div class="f f-black" style="top:1000px;left:0;right:0"></div><div style="position:absolute;top:260px;right:180px;font-size:34px"><span class="tab b">04 / 100</span></div><div style="position:absolute;right:180px;left:64px;top:1060px"><h1 class="d" style="font-size:128px;line-height:1.14">إنت بقيت<br><span class="mk">الـBottleneck</span></h1></div>'],
+ ['End card', '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:180px;left:64px;top:620px"><h1 class="d" style="font-size:140px;line-height:1.15">قبل الأداة،<br>ارسم الشغل.</h1></div><div class="on-blue" style="position:absolute;right:180px;bottom:520px"><div class="d" style="font-size:70px">حسام جعران<span class="stop"></span></div><div class="mono" style="font-size:28px;margin-top:18px;color:var(--white);text-align:right">@GOURAAN</div></div>']
+];
+var h=''; F.forEach(function(f){ h+='<div>'+HG.ab(W,H,s,f[1])+'<div class="hg-cap"><b>'+f[0]+'</b></div></div>'; });
+HG.mount('#v',h);
+</script>
+</body>
+</html>

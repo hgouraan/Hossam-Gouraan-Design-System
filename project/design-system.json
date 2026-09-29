@@ -1,0 +1,78 @@
+{
+ "v": 3,
+ "layout": "files",
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-09-26T10:12:36Z"
+ },
+ "title": "Hossam Gouraan",
+ "namespace": "HG",
+ "libraries": [],
+ "sections": {},
+ "groups": [
+  "Photography"
+ ],
+ "assetGroups": {
+  "Photography": {
+   "name": "Photography",
+   "tile": "l",
+   "order": [
+    "hossam-p1.jpg",
+    "hossam-p2.jpg",
+    "hossam-p3.jpg",
+    "hossam-p1-cutout.webp",
+    "hossam-p2-cutout.webp",
+    "hossam-p3-cutout.webp"
+   ],
+   "files": {
+    "hossam-p1.jpg": {
+     "name": "hossam-p1.jpg",
+     "blob": "73a3a50a4089a4f7b666b7a7a5cd0112",
+     "size": 125435,
+     "type": "image/jpeg"
+    },
+    "hossam-p2.jpg": {
+     "name": "hossam-p2.jpg",
+     "blob": "6dbfcff196b5578a2989a13d20b99fae",
+     "size": 101290,
+     "type": "image/jpeg"
+    },
+    "hossam-p3.jpg": {
+     "name": "hossam-p3.jpg",
+     "blob": "5c3cf073d9123870dccf5570c21cf41e",
+     "size": 105931,
+     "type": "image/jpeg"
+    },
+    "hossam-p1-cutout.webp": {
+     "name": "hossam-p1-cutout.webp",
+     "blob": "c95942c645ef177c3958775b1b87024e",
+     "size": 59888,
+     "type": "image/webp"
+    },
+    "hossam-p2-cutout.webp": {
+     "name": "hossam-p2-cutout.webp",
+     "blob": "4d78e97189eadc0c129718d753181125",
+     "size": 47512,
+     "type": "image/webp"
+    },
+    "hossam-p3-cutout.webp": {
+     "name": "hossam-p3-cutout.webp",
+     "blob": "0d072d189c827d827d06fc2b750e84d5",
+     "size": 52594,
+     "type": "image/webp"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "lastChange": {
+  "by": "Gouraan",
+  "at": "2026-09-26T14:47:50Z",
+  "via": "Cowork",
+  "note": "V2: re-architected against the strategy docs into master identity, master content language, season layer and Season 01"
+ }
+}

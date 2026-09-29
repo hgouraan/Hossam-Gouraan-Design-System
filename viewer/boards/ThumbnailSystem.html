@@ -1,0 +1,56 @@
+<!-- @dsCard page group="02 Master Content Language" height=2287 width=1200 subtitle="Three templates, one system: A · B · C, small-size test, safe zones" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Thumbnail system</title>
+<style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · thumbnails</div>
+  <h2 class="hg-h">One architecture, three templates</h2>
+  <p class="hg-p">Every thumbnail is a portrait + a solid Field + a 2–6 word Arabic headline set in the display face. The Field meets the portrait at a hard vertical seam at 56 / 44. The only metadata allowed is the Index Tab. No name, no logo, no hashtag: the face and the system are the signature. Titles are statements, not literal questions (a shared default taken from the Season 01 research). Sample copy comes from the Voice Guide.</p>
+  <div class="hg-row" id="tpl"></div>
+  <hr class="hg-sep">
+  <div class="hg-kicker">Readability test — real YouTube sizes</div>
+  <p class="hg-p">Home feed (≈360 px), sidebar (168 px) and mobile search (246 px). If the headline can't be read at 168 px, it has too many words.</p>
+  <div class="hg-row" id="small" style="align-items:flex-end"></div>
+  <hr class="hg-sep">
+  <div class="hg-kicker">Safe zones · 1280 × 720</div>
+  <div class="hg-row">
+    <div id="safe"></div>
+    <ul class="hg-spec" style="max-width:520px">
+      <li><b>Margin</b> 48 px (thumb-margin) on all sides. The headline never touches the seam: 40 px clearance.</li>
+      <li><b>Timestamp zone</b> bottom-left 200 × 80 px (it sits bottom-right in LTR, but Arabic UI mirrors it). Keep both bottom corners free of words.</li>
+      <li><b>Headline baseline</b> ends ≥ 92 px above the bottom edge.</li>
+      <li><b>Face</b> — head height 44–62 % of the frame height, eyes in the upper 40 %. The face never crosses the seam.</li>
+      <li><b>Headline</b> 130–180 px Arabic display, 900 weight, max 2 lines, 2–6 words. One word may carry the Mark (master) or the active season's gesture, never both.</li>
+      <li><b>Index Tab</b> 24 px mono, top corner of the Field, journey count for core episodes (04 / 100); a season adds its prefix (S01 · 04 / 100); extra content has no Tab.</li>
+    </ul>
+  </div>
+</div>
+<script>
+var T = [
+  { name:'A — Portrait left · Field right · master', o:{tpl:'A', photo:'p1', field:'black', lines:['شركتك مش محتاجة','<span class="mk">موظفين أكتر</span>'], size:150, head:.5, top:.1, tab:'04 / 100'} },
+  { name:'B — Portrait right · Field left · master', o:{tpl:'B', photo:'p2', field:'blue', lines:['ارسم','<span class="mk">الـworkflow</span> الأول'], size:150, head:.5, top:.1} },
+  { name:'C — Close crop on flat blue · master', o:{tpl:'C', photo:'p3', lines:['إنت بقيت','الـBottleneck'], size:170} },
+  { name:'A + Season 01 layer (S01 prefix + Strike)', o:{tpl:'A', photo:'p3', field:'black', lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'], size:170, head:.5, top:.1, tab:'S01 · 08 / 100'} }
+];
+var h='';
+T.forEach(function(t){ h+='<div>'+HG.ab(1280,720,.43,HG.thumb(t.o))+'<div class="hg-cap"><b>'+t.name+'</b></div></div>'; });
+HG.mount('#tpl',h);
+var s='';
+[[360,'Home feed 360'],[246,'Mobile search 246'],[168,'Sidebar 168']].forEach(function(z){
+  s+='<div>'+HG.ab(1280,720,z[0]/1280,HG.thumb(T[0].o))+'<div class="hg-cap">'+z[1]+'</div></div>';
+  s+='<div>'+HG.ab(1280,720,z[0]/1280,HG.thumb(T[2].o))+'<div class="hg-cap">'+z[1]+'</div></div>';
+});
+HG.mount('#small',s);
+var safe = HG.thumb(T[0].o) +
+  '<div class="sz" style="left:48px;top:48px;right:48px;bottom:48px"></div>'+
+  '<div class="sz-no" style="left:0;bottom:0;width:200px;height:80px"></div>'+
+  '<div class="sz-no" style="right:0;bottom:0;width:200px;height:80px"></div>'+
+  '<div style="position:absolute;left:563px;top:0;bottom:0;width:0;border-left:3px dashed rgba(255,255,255,.7)"></div>'+
+  '<div class="sz-l" style="left:575px;top:14px">SEAM 44 / 56</div>'+
+  '<div class="sz-l" style="left:56px;top:14px">MARGIN 48</div>';
+HG.mount('#safe', HG.ab(1280,720,.48,safe));
+</script>
+</body>
+</html>

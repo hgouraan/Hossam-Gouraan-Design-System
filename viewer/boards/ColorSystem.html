@@ -1,0 +1,94 @@
+<!-- @dsCard page group="01 Master Identity" height=1668 width=1200 subtitle="Locked core: #2047F4 · #0A1748 · #000000 — tones, proportions, pairs to use and avoid" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Color system</title><style>body{margin:0}
+.core{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:0;height:300px;margin-bottom:12px}
+.core>div{position:relative;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.core .n{font-family:var(--font-en-display);font-stretch:87.5%;font-weight:800;font-size:30px;line-height:1;letter-spacing:-.01em}
+.core .v{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;line-height:1.7}
+.core .lock{position:absolute;top:22px;right:22px;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;border:1px solid currentColor;padding:4px 6px}
+.ramp{display:grid;grid-template-columns:repeat(13,1fr);margin-bottom:6px}
+.ramp div{height:84px;padding:8px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.04em;line-height:1.4;display:flex;flex-direction:column;justify-content:flex-end}
+.prop{display:flex;height:40px;margin:8px 0 6px}
+.prop div{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;display:flex;align-items:center;padding:0 10px}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl td,.tbl th{border-top:1px solid var(--rule);padding:8px 10px 8px 0;text-align:left;vertical-align:top;color:var(--ink-muted);line-height:1.5}
+.tbl th{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.tbl td:first-child{color:var(--ink);white-space:nowrap}
+.sw{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:8px;outline:1px solid var(--rule)}
+.avoid{position:relative}
+.avoid::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:6px;background:var(--brand-blue);transform:rotate(-8deg)}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · colour</div>
+  <h2 class="hg-h">Three colours. Locked.</h2>
+  <p class="hg-p">Electric Blue, Deep Navy and Black are fixed strategic decisions. Everything else is a tonal step of the blues, an off-black, white/off-white or a neutral grey. There is no functional accent — no red, green, orange, yellow or purple, including for states and charts. Richness comes from contrast, scale and tone.</p>
+
+  <div class="core">
+    <div style="background:var(--brand-blue);color:var(--white)"><span class="lock">LOCKED</span><div class="n">Electric Blue</div><div class="v">#2047F4<br>RGB 32 71 244<br>brand-blue · field<br>WHITE ON IT 6.4 : 1</div></div>
+    <div style="background:var(--brand-navy);color:var(--white)"><span class="lock">LOCKED</span><div class="n">Deep Navy</div><div class="v">#0A1748<br>RGB 10 23 72<br>brand-navy<br>WHITE ON IT 16.9 : 1</div></div>
+    <div style="background:var(--black);color:var(--white);outline:1px solid var(--rule);outline-offset:-1px"><span class="lock">LOCKED</span><div class="n">Black</div><div class="v">#000000<br>RGB 0 0 0<br>black<br>WHITE ON IT 21 : 1</div></div>
+  </div>
+
+  <div class="ramp">
+    <div style="background:var(--brand-blue-mist);color:var(--ink-900)">MIST<br>#EAEEFF</div>
+    <div style="background:var(--brand-blue-soft);color:var(--ink-900)">SOFT<br>#B9C6FF</div>
+    <div style="background:var(--brand-blue-bright);color:var(--black)">BRIGHT<br>#5B78FF</div>
+    <div style="background:var(--brand-blue);color:var(--white)">BLUE<br>#2047F4</div>
+    <div style="background:var(--brand-blue-deep);color:var(--white)">DEEP<br>#1633C4</div>
+    <div style="background:var(--brand-navy-raised);color:var(--white)">NAVY+<br>#15276B</div>
+    <div style="background:var(--brand-navy);color:var(--white)">NAVY<br>#0A1748</div>
+    <div style="background:var(--black);color:var(--white)">BLACK<br>#000000</div>
+    <div style="background:var(--ink-900);color:var(--white)">INK 900<br>#0B0B0D</div>
+    <div style="background:var(--ink-800);color:var(--white)">INK 800<br>#17181B</div>
+    <div style="background:var(--grey-700);color:var(--white)">GREY 700<br>#34363C</div>
+    <div style="background:var(--grey-400);color:var(--black)">GREY 400<br>#8C8F98</div>
+    <div style="background:var(--paper);color:var(--ink-900)">PAPER<br>#F4F3EF</div>
+  </div>
+  <div class="hg-cap" style="max-width:none;margin-bottom:22px">Blue tones left, navy + blacks centre, neutrals right. Also: grey-500 #5A5D66 (muted text on paper), grey-200 #D5D7DC (hairlines on paper), white #FFFFFF.</div>
+
+  <div class="hg-kicker">Proportion across a feed</div>
+  <div class="prop">
+    <div style="flex:44;background:var(--black);color:var(--white);outline:1px solid var(--rule)">BLACK / OFF-BLACK 44%</div>
+    <div style="flex:32;background:var(--brand-blue);color:var(--white)">BLUE 32%</div>
+    <div style="flex:12;background:var(--brand-navy);color:var(--white)">NAVY 12%</div>
+    <div style="flex:12;background:var(--white);color:var(--black)">WHITE TYPE 12%</div>
+  </div>
+  <div class="hg-cap" style="max-width:none;margin-bottom:24px">Photographs count as blue (the backdrop) + black (the T-shirt). Paper and mist appear only on the website and long-read carousels.</div>
+
+  <div class="hg-kicker">In layouts — approved pairs</div>
+  <div class="hg-row" id="pairs"></div>
+
+  <div class="hg-kicker">Pairs to avoid</div>
+  <div class="hg-row" id="avoid"></div>
+
+  <table class="tbl">
+    <tr><th>Colour</th><th>Background</th><th>Typography</th><th>Accent</th><th>Never</th></tr>
+    <tr><td><span class="sw" style="background:#2047F4"></span>Electric Blue</td><td>Fields, thumbnails, covers, season assets</td><td>White on it. As text only on white/paper</td><td>Square Stop, Strike, Index Tab on black</td><td>Small text on black; next to navy text</td></tr>
+    <tr><td><span class="sw" style="background:#0A1748"></span>Deep Navy</td><td>Long-form video cards, web footer, LinkedIn</td><td>White, blue-soft</td><td>—</td><td>Next to blue as text/ground pair (2.7:1)</td></tr>
+    <tr><td><span class="sw" style="background:#000"></span>Black</td><td>Black Fields, video cards, reels</td><td>White, blue-bright for one word</td><td>Strike on blue</td><td>Grey-on-black body copy under 4.5:1</td></tr>
+    <tr><td><span class="sw" style="background:#5B78FF"></span>Blue Bright</td><td>Never a ground</td><td>Highlighted word / hashtag on black &amp; navy</td><td>Thin rules on dark</td><td>Fill behind white text</td></tr>
+    <tr><td><span class="sw" style="background:#F4F3EF"></span>Paper</td><td>Website, long-read slides</td><td>Ink-900, blue for one word</td><td>—</td><td>Thumbnails (loses the blue/black world)</td></tr>
+  </table>
+</div>
+<script>
+var S=250/1080, pairs=[
+ ['White on Blue','f-blue','<h1 class="d" style="font-size:120px">الفكرة<br>رخيصة</h1>','6.4 : 1'],
+ ['White + Bright on Black','f-black','<h1 class="d" style="font-size:120px">التنفيذ<br><span class="hi">هو الفرق</span></h1>','21 : 1 · 5.6 : 1'],
+ ['White + Soft on Navy','f-navy','<h1 class="d" style="font-size:120px">اسأل<br><span style="color:var(--brand-blue-soft)">لماذا؟</span></h1>','16.9 : 1 · 10 : 1'],
+ ['Ink + Blue on Paper','f-paper','<h1 class="d" style="font-size:120px">نظام<br><span style="color:var(--brand-blue)">لا شخص</span></h1>','18 : 1 · 5.8 : 1']
+];
+var h=''; pairs.forEach(function(p){ h+='<div>'+HG.ab(1080,1080,S,'<div class="f '+p[1]+'" style="left:0;right:0"></div><div style="position:absolute;right:80px;left:80px;bottom:110px">'+p[2]+'</div><div class="mono" style="position:absolute;top:80px;right:80px;font-size:30px">'+p[3]+'</div>')+'<div class="hg-cap"><b>'+p[0]+'</b></div></div>'; });
+HG.mount('#pairs',h);
+var av=[
+ ['Navy text on Blue — 2.7:1','<div class="f f-blue" style="left:0;right:0"></div><h1 class="d" style="position:absolute;right:80px;bottom:110px;font-size:130px;color:var(--brand-navy)">ضعيف</h1>'],
+ ['Blue body text on Black — 3.3:1','<div class="f f-black" style="left:0;right:0"></div><p class="t" style="position:absolute;right:80px;left:80px;top:420px;font-size:44px;line-height:1.7;color:var(--brand-blue)">النص الصغير بالأزرق على الأسود لا يُقرأ بسهولة.</p>'],
+ ['Gradients and glow — even in blue','<div class="f" style="left:0;right:0;background:radial-gradient(circle at 60% 40%,#5B78FF 0,#2047F4 30%,#0A1748 70%,#000 100%)"></div><h1 class="d" style="position:absolute;right:80px;bottom:110px;font-size:120px;text-shadow:0 0 40px #5B78FF">مستقبل</h1>'],
+ ['Blue photo on Blue Field (no seam)','<div class="f f-blue" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:520,h:1080,x:0,head:.3,top:.18,cx:.5})+'<h1 class="d" style="position:absolute;right:80px;bottom:110px;font-size:110px">سيم<br>ضائع</h1>']
+];
+var a=''; av.forEach(function(p){ a+='<div>'+HG.ab(1080,1080,S,p[1]+'<div style="position:absolute;left:60px;right:60px;top:50%;height:22px;background:var(--white);transform:rotate(-14deg)"></div>')+'<div class="hg-cap"><b>'+p[0]+'</b></div></div>'; });
+HG.mount('#avoid',a);
+</script>
+</body>
+</html>

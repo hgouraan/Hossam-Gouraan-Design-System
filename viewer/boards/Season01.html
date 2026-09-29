@@ -1,0 +1,100 @@
+<!-- @dsCard page group="04 Season 01" height=2926 width=1200 subtitle="تكسير المسلّمات — episodes 01–20: lockup, S01 prefix and the Strike on top of the master identity" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Season 01</title><style>body{margin:0}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
+.tbl td,.tbl th{border-top:1px solid var(--rule);padding:8px 12px 8px 0;text-align:left;vertical-align:top;color:var(--ink-muted);line-height:1.5}
+.tbl th{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.tbl td:first-child{color:var(--ink);white-space:nowrap}
+.yes{color:var(--accent-ink)!important}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">04 — Season 01 · episodes 01–20</div>
+  <h2 class="hg-h">تكسير المسلّمات — the first chapter, not the brand.</h2>
+  <p class="hg-p">Season 01's job is to establish the channel's intellectual behaviour (Master Strategy §14). It moves the viewer from "what is the correct thing to do?" to "why did I assume that was correct in the first place?". Its layer adds exactly three things on top of the master identity: the <b style="color:var(--ink)">name lockup</b>, the <b style="color:var(--ink)">S01 · prefix</b>, and <b style="color:var(--ink)">one gesture: the Strike</b>, drawn through the assumption, snapped in two in the season's own form. Take them away and what's left is Hossam Gouraan.</p>
+  <div style="border:1px dashed var(--rule);padding:12px 16px;font-size:12.5px;line-height:1.6;color:var(--ink-muted);margin-bottom:24px;max-width:900px"><b style="color:var(--ink)">Naming flag:</b> the strategy documents call this season <b style="color:var(--ink)">فكّ المسلّمات</b>; your brief says <b style="color:var(--ink)">تكسير المسلّمات</b>. This board uses your spelling. If it becomes فكّ, only this layer changes: the lockup and possibly the gesture (untying rather than crossing out).</div>
+
+  <div class="hg-kicker">The Strike — Season 01's gesture</div>
+  <div class="hg-row" id="gesture"></div>
+
+  <div class="hg-kicker">The season's four questions (§14) — a row of the 100 grid</div>
+  <div id="phases" style="margin-bottom:26px"></div>
+
+  <div class="hg-kicker">Lockup</div>
+  <div class="hg-row" id="lock"></div>
+
+  <div class="hg-kicker">Season cover · episode thumbnail · episode card · announcement</div>
+  <div class="hg-row" id="apps"></div>
+
+  <div class="hg-kicker">Video opening — 4 seconds</div>
+  <div class="hg-row" id="open" style="gap:10px"></div>
+
+  <div class="hg-kicker">Marker rules</div>
+  <table class="tbl">
+    <tr><th>Marker</th><th>Thumbnail</th><th>Episode card / cover</th><th>In video</th><th>Captions / posts</th><th>Form</th></tr>
+    <tr><td>S01 · 04 / 100</td><td class="yes">Index Tab, 24 px</td><td class="yes">Tab + giant numeral</td><td class="yes">Opener + lower third</td><td class="yes">First line</td><td>Mono. Season prefix + master journey count. Never "EP.4" or "#4".</td></tr>
+    <tr><td>تكسير المسلّمات</td><td>No — the broken Strike says it</td><td class="yes">Lockup</td><td class="yes">Opening, end card</td><td class="yes">Title prefix</td><td>Plain words, display face</td></tr>
+    <tr><td>#تكسير_المسلمات</td><td>Never</td><td>Footer only, 22 px</td><td>Never</td><td class="yes">Always</td><td>Hashtag lives in text fields, not artwork</td></tr>
+    <tr><td>مستوحاة من أحداث حقيقية</td><td>Only if it is the hook, as outline tag under the headline</td><td class="yes">Outline tag, when true</td><td class="yes">Opening stamp, 2 s</td><td>As hashtag #مستوحاة_من_أحداث_حقيقية</td><td>Outline tag (plain label) — stronger than a hashtag in artwork</td></tr>
+  </table>
+</div>
+<script>
+var lk = '<div class="f f-black" style="left:0;right:0"></div>'
+ + '<div style="position:absolute;right:120px;top:120px;font-size:30px"><span class="tab b">S01</span></div>'
+ + '<div style="position:absolute;right:120px;top:260px"><h1 class="d" style="font-size:250px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1></div>'
+ + '<div class="mono" style="position:absolute;left:120px;bottom:120px;font-size:26px;color:var(--grey-400)">SEASON 01 · BREAKING THE OBVIOUS</div>'
+ + '<div style="position:absolute;right:120px;bottom:110px"><div class="d" style="font-size:52px">حسام جعران<span class="stop"></span></div></div>';
+var lk2 = '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:80px;top:90px"><div style="font-size:40px"><span class="tab">S01</span></div><h1 class="d" style="font-size:170px;margin-top:70px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1></div>';
+var lk3 = '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:60px;top:70px;display:flex;align-items:center;gap:26px"><span class="d8" style="font-size:66px">تكسير <span class="s brk" style="--strike:var(--brand-blue)">المسلّمات</span></span><span style="font-size:30px"><span class="tab b">S01</span></span></div>';
+HG.mount('#lock', '<div>'+HG.ab(1920,1080,640/1920,lk)+'<div class="hg-cap"><b>Primary lockup</b> · on black · signature stays</div></div>'
+ + '<div>'+HG.ab(1080,1080,240/1080,lk2)+'<div class="hg-cap"><b>On blue</b></div></div>'
+ + '<div style="width:240px">'+HG.ab(1080,220,240/1080,lk3)+'<div class="hg-cap"><b>Horizontal</b> · headers, end cards</div><div class="hg-cap" style="margin-top:14px">The master identity stays primary: the signature حسام جعران■ always appears on the season cover and end card; the season lockup never appears without Hossam\'s face or name nearby.</div></div>');
+
+var S=.2;
+var cover = '<div class="f f-black" style="left:0;right:0"></div>' + HG.portrait({photo:'p3',w:760,h:1080,x:0,head:.36,top:.16,cx:.55})
+ + '<div class="f f-blue" style="right:0;width:1160px"></div>'
+ + '<div class="on-blue" style="position:absolute;right:96px;top:96px;font-size:30px"><span class="tab">S01 · 01—20 / 100</span></div>'
+ + '<div class="on-blue" style="position:absolute;right:96px;width:970px;top:300px"><h1 class="d" style="font-size:220px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1></div>'
+ + '<div class="on-blue" style="position:absolute;right:96px;bottom:96px"><div class="d" style="font-size:48px">حسام جعران<span class="stop"></span></div></div>'
+ + '<div class="mono" style="position:absolute;left:856px;bottom:100px;font-size:22px;color:var(--white)">10 EPISODES</div>';
+var card = '<div class="f f-black" style="left:0;right:0"></div>'
+ + '<div style="position:absolute;right:64px;top:64px;font-size:30px"><span class="tab b">S01 · 04 / 100</span></div>'
+ + '<div class="num" style="position:absolute;left:40px;top:40px;font-size:440px;color:var(--brand-blue)">04</div>'
+ + '<div style="position:absolute;right:64px;left:64px;top:620px"><div class="t" style="font-size:34px;font-weight:600;color:var(--grey-400);margin-bottom:26px">المسلَّمة:</div><h1 class="d" style="font-size:120px;line-height:1.2">خبرتك<br><span class="s brk">كفاية</span> تقرر</h1><div style="margin-top:44px;font-size:30px"><span class="otag">مستوحاة من أحداث حقيقية</span></div></div>'
+ + '<div class="mono" style="position:absolute;right:64px;bottom:64px;font-size:22px;color:var(--grey-400)">24 MIN · YOUTUBE</div>'
+ + '<div class="t" style="position:absolute;left:64px;bottom:60px;font-size:26px;font-weight:600;color:var(--brand-blue-bright)">#تكسير_المسلمات</div>';
+var ann = '<div class="f f-blue" style="left:0;right:0"></div>' + HG.portrait({photo:'p2',cut:true,w:1080,h:1350,head:.22,top:.44,cx:.3,box:false})
+ + '<div class="on-blue" style="position:absolute;right:64px;top:64px;font-size:30px"><span class="tab">S01</span></div>'
+ + '<div class="on-blue" style="position:absolute;right:64px;top:200px"><div class="t" style="font-size:46px;font-weight:700">الموسم الأول</div><h1 class="d" style="font-size:150px;margin-top:10px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1></div>'
+ + '<div class="on-blue" style="position:absolute;right:64px;bottom:120px;text-align:right"><div class="mono" style="font-size:30px;color:var(--white)">08.10.2026</div><div class="t" style="font-size:34px;font-weight:600;margin-top:12px">كل خميس · 8 م بتوقيت القاهرة</div></div>';
+HG.mount('#apps',
+  '<div>'+HG.ab(1920,1080,.2,cover)+'<div class="hg-cap"><b>Season cover 16:9</b></div></div>'
+ +'<div>'+HG.ab(1280,720,.3,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'],tab:'S01 · 02 / 100'}))+'<div class="hg-cap"><b>Episode thumbnail</b></div></div>'
+ +'<div>'+HG.ab(1080,1350,.2,card)+'<div class="hg-cap"><b>Episode card 4:5</b></div></div>'
+ +'<div>'+HG.ab(1080,1350,.2,ann)+'<div class="hg-cap"><b>Announcement</b> · launch 8 Oct 2026 (Distribution §36)</div></div>');
+
+var F=[
+ ['0.0 s · CUT TO BLACK','<div class="f f-black" style="left:0;right:0"></div>'],
+ ['0.2 s · STAMP (if true)','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:96px;font-size:40px;color:var(--white)"><span class="otag">مستوحاة من أحداث حقيقية</span></div>'],
+ ['0.8 s · ASSUMPTION','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:200px">دفعنا كتير<br>فلازم نكمّل</h1></div>'],
+ ['1.6 s · STRIKE SNAPS','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:200px">دفعنا كتير<br><span class="s brk">فلازم</span> نكمّل</h1></div>'],
+ ['2.4 s · FIELD WIPES IN','<div class="f f-blue" style="right:0;width:1240px"></div><div class="f f-black" style="left:0;width:680px"></div><div class="on-blue" style="position:absolute;right:96px;top:300px"><div style="font-size:34px"><span class="tab">S01 · 04 / 100</span></div><h1 class="d" style="font-size:150px;margin-top:40px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1></div>'],
+ ['3.4 s · CUT TO HOSSAM', HG.portrait({photo:'p2',w:1920,h:1080,head:.4,top:.16,cx:.6})+'<div style="position:absolute;right:96px;bottom:120px;display:flex;align-items:stretch"><div style="background:var(--black);padding:18px 30px"><div class="t" style="font-size:40px;font-weight:700">حسام جعران</div></div><div style="background:var(--brand-blue);padding:18px 26px;display:flex;align-items:center"><span class="mono" style="font-size:24px">S01 · 04 / 100</span></div></div>']
+];
+var o=''; F.forEach(function(f){ o+='<div>'+HG.ab(1920,1080,181/1920,f[1])+'<div class="hg-cap" style="font-size:10px">'+f[0]+'</div></div>'; });
+HG.mount('#open',o);
+
+HG.mount('#gesture', [
+ ['<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:70px;bottom:110px"><h1 class="d" style="font-size:150px;line-height:1.2">الخطة<br><span class="s brk">واقعية</span></h1></div>','Broken Strike · blue on black'],
+ ['<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:70px;bottom:110px"><h1 class="d" style="font-size:150px;line-height:1.2">خبرتك<br><span class="s brk">كفاية</span></h1></div>','Broken Strike · black on blue'],
+ ['<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:70px;bottom:110px"><h1 class="d" style="font-size:150px;line-height:1.2">الخطة<br><span class="s">واقعية</span></h1></div>','Plain Strike · in-video / small sizes']
+].map(function(x){ return '<div>'+HG.ab(1080,1080,200/1080,x[0])+'<div class="hg-cap">'+x[1]+'</div></div>'; }).join('') + '<ul class="hg-spec" style="width:420px"><li><b>Rule</b> strike the assumption, never the person, never a whole sentence. Max one per piece.</li><li><b>Weight</b> 0.13 em (strike-weight). Broken step 0.09 em.</li><li><b>Motion</b> draws right → left in 420 ms, then snaps (+60 ms). This replaces the master Mark sweep during S01 only.</li><li><b>Voice</b> the struck word should be something people actually assume, stated fairly: challenge the idea, not the audience (Voice §14, §16).</li></ul>');
+var q=[['إنت بتبني إيه؟','WHAT ARE YOU BUILDING?'],['إيه اللي بايظ فعلًا؟','WHAT IS ACTUALLY BROKEN?'],['إيه اللي بيحصل لما يكبر؟','WHAT HAPPENS WHEN IT GROWS?'],['لو إنت جزء من المشكلة؟','WHAT IF YOU ARE PART OF THE PROBLEM?']];
+var ph='<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:70px">'+HG.journey({done:4,cell:68,gap:19,rows:1})+'</div>';
+q.forEach(function(x,i){ ph+='<div style="position:absolute;right:'+(96+i*435)+'px;top:190px;width:410px;border-top:4px solid var(--brand-blue);padding-top:20px"><div class="d8" style="font-size:40px">'+x[0]+'</div><div class="mono" style="font-size:15px;color:var(--grey-400);margin-top:10px;text-align:right">'+x[1]+'</div></div>'; });
+ph+='<div class="mono" style="position:absolute;left:96px;top:30px;font-size:18px;color:var(--grey-400)">S01 · ROW 01 · 01–20 / 100</div><div class="t" style="position:absolute;left:96px;bottom:40px;font-size:20px;color:var(--grey-400)">التسلسل مرشّح وقابل للتعديل — عدد الحلقات في كل مرحلة غير محدد</div>';
+HG.mount('#phases', HG.ab(1920,400,1136/1920,ph));
+</script>
+</body>
+</html>

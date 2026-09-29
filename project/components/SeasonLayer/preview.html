@@ -1,0 +1,70 @@
+<!-- @dsCard page group="03 Season Layer" height=1058 width=1200 subtitle="The fixed slot every season fills: what a season may change, what it may never touch — proven with a hypothetical Season 02" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Season layer</title><style>body{margin:0}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;margin:0 0 10px;color:var(--accent-ink)}
+.may li b{color:var(--ink)}
+.hyp{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;border:1px dashed var(--ink-muted);padding:3px 6px;color:var(--ink-muted);margin-left:8px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">03 — Season layer</div>
+  <h2 class="hg-h">A season is a chapter, not a rebrand.</h2>
+  <p class="hg-p">Only the active season is planned in detail, and later seasons stay flexible (Master Strategy §13). So the system gives every season the same small slot. A season brings a name and <b style="color:var(--ink)">one gesture</b>; everything else is inherited. Below, the same piece in three states. The master layer alone is already complete.</p>
+
+  <div class="cols3" id="states"></div>
+
+  <div class="cols3" style="margin-top:30px">
+    <div class="col may"><h4>A SEASON MAY DEFINE</h4><ul class="hg-spec">
+      <li><b>Name + lockup</b> in Thmanyah Sans (the season's only "logo").</li>
+      <li><b>One gesture</b> applied to one word per headline. Built from rectangles and lines, in master colours.</li>
+      <li><b>Tab prefix</b> Sxx · before the journey count.</li>
+      <li><b>Row label</b> on the 100 grid.</li>
+      <li><b>Opener beat</b>: the 1-second middle of the master opener.</li>
+      <li><b>Season cover</b> on the master cover frame.</li>
+      <li><b>Hashtag / tags</b>: captions only.</li>
+    </ul></div>
+    <div class="col"><h4>A SEASON MAY NEVER</h4><ul class="hg-spec">
+      <li>Add a colour, gradient or tint outside the master tokens.</li>
+      <li>Add a font or switch the display face.</li>
+      <li>Change the photography world or uniform.</li>
+      <li>Replace the Field, move the Tab, or drop the journey count.</li>
+      <li>Touch the name signature or add a season logo-mark.</li>
+      <li>Run a second gesture next to its own.</li>
+      <li>Leave its gesture on master or extra content after the season ends.</li>
+    </ul></div>
+    <div class="col"><h4>WHEN A SEASON ENDS</h4><ul class="hg-spec">
+      <li>Its episodes keep their thumbnails. The archive is not re-branded.</li>
+      <li>Its gesture retires from new work, unless a later season deliberately calls back to it.</li>
+      <li>The grid keeps its row, labelled, as part of the journey's history.</li>
+      <li>The review at the end of each season (§25) decides the next season's name and gesture; the design follows the editorial decision, not the reverse.</li>
+    </ul></div>
+  </div>
+
+  <div class="hg-kicker" style="margin-top:28px">The master opener — the season fills one beat</div>
+  <div class="hg-row" id="open" style="gap:10px"></div>
+</div>
+<script>
+var S=360/1280;
+var base={tpl:'A',photo:'p1',field:'black'};
+var st=[
+ ['MASTER ONLY','Complete on its own: face, Field, Thmanyah, the Mark, journey count.',HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="mk">فلازم</span> نكمّل'],tab:'08 / 100'})],
+ ['+ SEASON 01 LAYER','Adds: S01 prefix + the broken Strike on the assumption. Nothing else moves.',HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'],tab:'S01 · 08 / 100'})],
+ ['+ SEASON 02 LAYER <span class="hyp">HYPOTHETICAL</span>','Proves the slot works with a different idea: a different gesture (here, a hairline box), same brand. Not a Season 02 decision.',HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['مين المسؤول','<span style="box-shadow:inset 0 0 0 .06em var(--brand-blue-bright);padding:0 .12em">فعلًا</span>؟'],tab:'S02 · 24 / 100'})]
+];
+var h=''; st.forEach(function(x){ h+='<div>'+HG.ab(1280,720,S,x[2])+'<div class="hg-cap" style="max-width:360px"><b>'+x[0]+'</b></div><div style="font-size:12.5px;color:var(--ink-muted);line-height:1.5;margin-top:4px;max-width:360px">'+x[1]+'</div></div>'; });
+HG.mount('#states',h);
+var head=HG.portrait({photo:'p2',w:1920,h:1080,head:.4,top:.16,cx:.6});
+var F=[
+ ['0.0 s · MASTER · CUT TO BLACK','<div class="f f-black" style="left:0;right:0"></div>'],
+ ['0.3 s · MASTER · THE QUESTION','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:180px;line-height:1.2">دفعنا كتير<br>فلازم نكمّل</h1></div>'],
+ ['1.2 s · SEASON BEAT (S01: STRIKE SNAPS)','<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:180px;line-height:1.2">دفعنا كتير<br><span class="s brk">فلازم</span> نكمّل</h1></div>'],
+ ['2.2 s · MASTER · FIELD + NAME / COUNT','<div class="f f-blue" style="right:0;width:1240px"></div><div class="f f-black" style="left:0;width:680px"></div><div class="on-blue" style="position:absolute;right:96px;top:330px"><div style="font-size:34px"><span class="tab">S01 · 08 / 100</span></div><h1 class="d" style="font-size:150px;margin-top:40px">حسام جعران<span class="stop"></span></h1></div>'],
+ ['3.2 s · MASTER · CUT TO HOSSAM',head+'<div style="position:absolute;right:96px;bottom:120px;display:flex;align-items:stretch"><div style="background:var(--black);padding:18px 30px"><div class="d" style="font-size:44px">حسام جعران<span class="stop"></span></div></div><div style="background:var(--brand-blue);padding:0 24px;display:flex;align-items:center"><span class="mono" style="font-size:22px">08 / 100</span></div></div>']
+];
+var o=''; F.forEach(function(f){ o+='<div>'+HG.ab(1920,1080,216/1920,f[1])+'<div class="hg-cap" style="font-size:9.5px;max-width:216px">'+f[0]+'</div></div>'; });
+HG.mount('#open',o);
+</script>
+</body>
+</html>

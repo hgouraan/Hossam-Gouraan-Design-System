@@ -1,0 +1,52 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style>
+<meta charset="utf-8">
+<title>Hossam Gouraan</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-en-text); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .blue { fill:var(--brand-blue); }
+  .deep { fill:var(--brand-blue-deep); }
+  .navy { fill:var(--brand-navy); }
+  .mist { fill:var(--brand-blue-mist); }
+  .bar  { fill:var(--ink); }
+  .bar-k { fill:var(--black); }
+  .sq { fill:var(--brand-blue); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-family:var(--font-en-display); font-stretch:87.5%; font-size:100px; line-height:.92; font-weight:800; letter-spacing:-.025em; color:var(--ink); }
+  .tag { margin:var(--space-3) 0 0 3px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      brand-blue 232x304 slab bled off top and bottom (the Field, largest) · brand-navy 152x192 · brand-blue-deep 64x96 · brand-blue-mist 64x48 tint · ~40% of 960x288
+  arrangement one tall Field slab meeting a navy block at a hard vertical seam (the thumbnail's 56/44 seam), satellites stacked flush on the space-8 grid, no gaps
+  pattern     the Strike, from "a solid bar through the assumption": four bars at strike thickness (12 = 0.13 x 96), one snapped in two with the Season 01 step; bars in ink and black across the Field
+  scales      sides in space-2/space-8 multiples; seam at x=248; step space-2; corners radius-0 (the system is square); Square Stop 16 = space-4
+-->
+<rect class="blue" x="16" y="-8" width="232" height="304"/>
+<rect class="navy" x="248" y="96" width="152" height="192"/>
+<rect class="deep" x="400" y="192" width="64" height="96"/>
+<rect class="mist" x="400" y="144" width="64" height="48"/>
+<rect class="bar-k" x="48" y="72" width="168" height="12"/>
+<rect class="bar" x="88" y="136" width="224" height="12"/>
+<rect class="bar-k" x="120" y="200" width="72" height="12"/>
+<rect class="bar-k" x="40" y="208" width="72" height="12"/>
+<rect class="sq" x="416" y="112" width="16" height="16"/>
+</svg>
+</div>
+<div class="words">
+  <h1 class="name">Hossam<br>Gouraan</h1>
+  <p class="tag">Builder · strategist · creator — Arabic first, blue and black.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- @dsCard page group="01 Master Identity" height=1430 width=1200 subtitle="Master devices only: the Field, the Index Tab, the Mark, the Square unit. The Strike now lives in Season 01." -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Graphic devices</title><style>body{margin:0}
+.dev{display:grid;grid-template-columns:300px 1fr;gap:28px;border-top:1px solid var(--rule);padding:22px 0}
+.dev h3{font-family:var(--font-en-display);font-stretch:87.5%;font-weight:800;font-size:28px;margin:4px 0 8px;letter-spacing:-.01em}
+.dev .lv{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--accent-ink)}
+.moved{border:1px dashed var(--rule);padding:14px 16px;font-size:13px;color:var(--ink-muted);line-height:1.6;margin-top:6px}
+.moved b{color:var(--ink)}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · graphic language</div>
+  <h2 class="hg-h">Four master shapes. All rectangles. No season in them.</h2>
+  <p class="hg-p">Every master device is a plain rectangle, so none of them carries a season's idea. Seasons add one gesture on top (see the Season layer). Remove the gesture and these four still read as Hossam Gouraan.</p>
+
+  <div class="dev"><div><div class="lv">PRIMARY · MASTER</div><h3>The Field</h3><ul class="hg-spec"><li>Flat Electric Blue or Black block that holds the type, meeting the photograph at a <b>hard vertical seam</b>.</li><li><b>Splits</b> 56/44 (default), 100 (text-led), 33/67 (portrait-led). Seams on a 12-column line.</li><li>Type sits on the Field, never on the face.</li></ul></div><div id="d1"></div></div>
+
+  <div class="dev"><div><div class="lv">SECONDARY · MASTER</div><h3>The Index Tab</h3><ul class="hg-spec"><li>Small black/blue block, square + mono label, top-right of the Field.</li><li><b>Master content = where you are in the journey:</b> <span class="mono" style="font-size:11px">04 / 100</span>. Also carousel count (02 / 06), card type (TABLE, SOURCE, سؤال).</li><li><b>Seasons add a prefix</b> (<span class="mono" style="font-size:11px">S01 · 04 / 100</span>). Extra content outside the 100 (§21) carries <b>no count</b>.</li></ul></div><div id="d2"></div></div>
+
+  <div class="dev"><div><div class="lv">SUPPORTING · MASTER · NEW IN V2</div><h3>The Mark</h3><ul class="hg-spec"><li>A solid block behind the <b>one word that carries the idea</b>: the term being explained, the consequence, the real problem. Blue on black/paper, black on blue.</li><li>It highlights; it doesn't judge. Fits "experience first, label second" (Voice §8) and works for any season's topic.</li><li><b>Max one per piece.</b> Also the in-video keyword device and the evidence highlighter on documents.</li></ul></div><div id="d3"></div></div>
+
+  <div class="dev"><div><div class="lv">MICRO · MASTER · RE-MEANT</div><h3>The Square unit</h3><ul class="hg-spec"><li>The blue square after the name is <b>one unit of the journey</b>: one episode, one question. V1 read it as "decided, final", which contradicts §6.</li><li>Squares build the <b>100 Journey grid</b> (next board), the bullet, and the square inside the Tab.</li><li>Blue on black/paper; black on blue; white on navy.</li></ul></div><div id="d4"></div></div>
+
+  <div class="moved"><b>Moved out of the master:</b> the Strike and the broken Strike now belong to <b>Season 01 · تكسير المسلّمات</b> as that season's single gesture. They are fully specified on the Season 01 board and may not appear in master or non-season content.</div>
+</div>
+<script>
+var S=182/1080, row=function(items){ var h='<div style="display:flex;gap:14px;flex-wrap:wrap">'; items.forEach(function(i){ h+='<div>'+HG.ab(i[0],i[1],i[2],i[3])+'<div class="hg-cap">'+i[4]+'</div></div>'; }); return h+'</div>'; };
+HG.mount('#d1', row([
+ [1080,1080,S, HG.portrait({photo:'p2',w:475,h:1080,x:0,head:.26,top:.2,cx:.52})+'<div class="f f-black" style="right:0;width:605px"></div><div style="position:absolute;right:64px;width:480px;bottom:110px"><h1 class="d" style="font-size:120px">سيم<br>عمودي</h1></div>','56 / 44 · Black'],
+ [1080,1080,S, '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:64px;left:64px;bottom:110px"><h1 class="d" style="font-size:150px">حقل<br>كامل</h1></div>','100 · Text only'],
+ [1080,1080,S, HG.portrait({photo:'p3',w:720,h:1080,x:360,head:.36,top:.14,cx:.45})+'<div class="f f-blue" style="left:0;width:360px"></div><div class="on-blue" style="position:absolute;left:40px;width:290px;bottom:110px"><h1 class="d" style="font-size:88px">ثلث</h1></div>','33 / 67 · Portrait-led'],
+ [1080,1080,S, '<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="left:0;right:0;top:auto;height:430px"></div><div style="position:absolute;right:64px;top:110px"><h1 class="d" style="font-size:120px">حقلان</h1></div><div class="on-blue" style="position:absolute;right:64px;bottom:110px"><div class="t" style="font-size:52px;font-weight:700">سؤال فوق، فهم تحت</div></div>','Stacked (cards only)']
+]));
+var tab=function(c,t,fs){ return '<div class="f '+c+'" style="left:0;right:0"></div><div style="position:absolute;top:80px;right:80px;font-size:'+(fs||46)+'px">'+t+'</div>'; };
+HG.mount('#d2', row([
+ [1080,1080,S, tab('f-black','<span class="tab b">04 / 100</span>')+'<div style="position:absolute;right:80px;bottom:110px"><h1 class="d" style="font-size:120px">حلقة</h1></div>','Master · journey count'],
+ [1080,1080,S, tab('f-blue','<span class="tab">S01 · 04 / 100</span>')+'<div class="on-blue" style="position:absolute;right:80px;bottom:110px"><h1 class="d" style="font-size:120px">موسم</h1></div>','With a season prefix'],
+ [1080,1080,S, tab('f-navy','<span class="tab b">SOURCE</span>')+'<div style="position:absolute;right:80px;bottom:110px"><h1 class="d" style="font-size:120px">مصدر</h1></div>','Card type'],
+ [1080,1080,S, tab('f-paper','<span class="tab">02 / 06</span>')+'<div style="position:absolute;right:80px;bottom:110px"><h1 class="d" style="font-size:120px">شريحة</h1></div>','Carousel count']
+]));
+HG.mount('#d3', row([
+ [1080,1080,S, '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:80px;left:80px;bottom:120px"><h1 class="d" style="font-size:140px;line-height:1.25">إنت بقيت<br><span class="mk">الـBottleneck</span></h1></div>','Mark · blue on black'],
+ [1080,1080,S, '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:80px;left:80px;bottom:120px"><h1 class="d" style="font-size:140px;line-height:1.25">ارسم<br><span class="mk">الـworkflow</span> الأول</h1></div>','Mark · black on blue'],
+ [1080,1080,S, '<div class="f f-paper" style="left:0;right:0"></div><div style="position:absolute;right:80px;left:80px;top:180px"><div class="mono" style="font-size:26px;color:var(--grey-500);text-align:right">DOCUMENT · P.14</div><p class="t" style="font-size:44px;line-height:1.9;margin-top:30px;color:var(--grey-500)">…ولاحظ الباحثون أن <span class="mk" style="font-weight:600">القرار يتأخر كلما زاد عدد الموافقات المطلوبة</span> داخل الفريق…</p></div>','Mark · evidence highlighter'],
+ [1920,1080,182/1920, HG.assets.vg('keyword'),'Mark · in video']
+]));
+HG.mount('#d4', row([
+ [1080,1080,S, '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:80px;bottom:120px"><h1 class="d" style="font-size:150px">حسام جعران<span class="stop"></span></h1></div>','Signature'],
+ [1080,1080,S, '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:80px;top:220px">'+HG.journey({done:4,cell:36,gap:13})+'</div><div class="mono" style="position:absolute;right:80px;bottom:110px;font-size:34px">04 / 100</div>','Journey grid'],
+ [1080,1080,S, '<div class="f f-navy" style="left:0;right:0"></div><div style="position:absolute;right:80px;top:200px" class="t"><div style="font-size:60px;font-weight:700;line-height:2.1"><span class="stop w" style="margin:0 0 0 28px"></span>فاهم المطلوب منه؟<br><span class="stop w" style="margin:0 0 0 28px"></span>عنده authority؟<br><span class="stop w" style="margin:0 0 0 28px"></span>الـworkflow واضح؟</div></div>','Bullet · white on navy']
+]));
+</script>
+</body>
+</html>

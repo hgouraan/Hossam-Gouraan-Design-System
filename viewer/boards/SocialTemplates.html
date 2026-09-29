@@ -1,0 +1,43 @@
+<!-- @dsCard page group="02 Master Content Language" height=1286 width=1200 subtitle="Episode-derived, native assets: post, framework, table, quote, insight, reel covers, story, launch announcement" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Social templates</title><style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · social</div>
+  <h2 class="hg-h">Episode-derived, not episode-dependent.</h2>
+  <p class="hg-p">Social assets carry one strong idea from an episode in a form native to the platform. They aren't billboards (Distribution §4, §14), and there's no quota; an asset only exists if it has a reason. The master set covers the designed assets the strategy names: key idea, framework, table, quote, next-episode teaser, announcement (§12). 1080 × 1350 is the master size; stories and reel covers are 1080 × 1920 with the headline inside the central band.</p>
+  <div class="hg-row" id="a" style="gap:18px"></div>
+  <div class="hg-row" id="b" style="gap:18px;align-items:flex-end"></div>
+  <ul class="hg-spec" style="max-width:900px">
+    <li><b>Post margin</b> 64 px. Tab top-right (journey count or card type), headline lower half, mono footer with @GOURAAN and the signature.</li>
+    <li><b>Quote</b> = someone else's words (navy). <b>Insight</b> = Hossam's own line (black or blue). <b>Table / framework</b> = paper or navy, with a source line.</li>
+    <li><b>LinkedIn</b> may lead in English. The same idea and evidence as the episode; only length, hook and wording change (§25).</li>
+  </ul>
+</div>
+<script>
+var W=1080,H=1350,s=200/1080,A=HG.assets;
+var foot=function(c){ return '<div class="mono" style="position:absolute;left:64px;bottom:64px;font-size:22px;color:'+(c||'var(--grey-400)')+'">@GOURAAN</div><div style="position:absolute;right:64px;bottom:56px"><div class="d" style="font-size:34px">حسام جعران<span class="stop"></span></div></div>'; };
+var P=[
+ ['Instagram · key idea (portrait-led)', HG.portrait({photo:'p1',w:W,h:700,head:.5,top:.12,cx:.45})+'<div class="f f-black" style="top:700px;left:0;right:0"></div><div style="position:absolute;top:64px;right:64px;font-size:28px"><span class="tab b">04 / 100</span></div><div style="position:absolute;right:64px;left:64px;top:760px"><h1 class="d" style="font-size:104px;line-height:1.25">لما كل قرار لازم<br>يعدي عليك، إنت <span class="mk">الـBottleneck</span></h1></div>'+foot()],
+ ['Instagram · key idea (text-led)', '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;top:64px;right:64px;font-size:28px"><span class="tab">04 / 100</span></div><div class="on-blue" style="position:absolute;right:64px;left:64px;top:470px"><h1 class="d" style="font-size:126px;line-height:1.2">قبل الأداة<br>رقم 16، ارسم<br><span class="mk">الـworkflow</span></h1></div><div class="on-blue">'+foot('var(--white)')+'</div>'],
+ ['Framework card', '<div class="f f-navy" style="left:0;right:0"></div><div style="position:absolute;top:64px;right:64px;font-size:28px"><span class="tab b">FRAMEWORK</span></div><div style="position:absolute;right:64px;left:64px;top:200px"><h1 class="d" style="font-size:80px;line-height:1.3">قبل ما تقول الموظف<br>مش عايز يشتغل</h1>'+[['01','فاهم المطلوب منه؟'],['02','عنده authority؟'],['03','الـworkflow واضح؟'],['04','عارف هيتحاسب على إيه؟']].map(function(r){return '<div style="display:flex;gap:30px;align-items:center;border-top:3px solid var(--brand-navy-raised);padding:26px 0;margin-top:14px"><span class="num" style="font-size:80px;color:var(--brand-blue-bright)">'+r[0]+'</span><span class="d8" style="font-size:52px">'+r[1]+'</span></div>'}).join('')+'</div>'+foot('var(--brand-blue-soft)')],
+ ['Table card', A.table({title:'المكتب ولا الـRemote؟<br>السؤال: محتاجه يعمل لك إيه',rows:[['الشغل محتاج','الأنسب غالبًا'],['تعاون لحظي كتير','مكان مشترك'],['تركيز فردي طويل','مرونة أكبر'],['Onboarding لناس جديدة','وقت مشترك مقصود']],size:64,source:'EXAMPLE STRUCTURE — CONTEXT-DEPENDENT'})],
+ ['Quote card (others)', A.card({quote:true,text:'الخطط لا قيمة لها، لكن التخطيط هو كل شيء.',by:'دوايت أيزنهاور'})]
+];
+var h=''; P.forEach(function(p){ h+='<div>'+HG.ab(W,H,s,p[1])+'<div class="hg-cap"><b>'+p[0]+'</b></div></div>'; });
+HG.mount('#a',h);
+var s2=160/1080;
+var Q=[
+ ['Insight card (Hossam)',W,H,A.card({ground:'black',tab:'INSIGHT',text:'أنا مش ضد استخدام AI. أنا ضد إنك تجمع Tools قبل ما تعرف <span class="mk">الـworkflow</span>.',size:84})],
+ ['LinkedIn · EN lead',W,H,'<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="left:0;right:0;top:auto;height:360px"></div><div style="position:absolute;top:64px;left:64px;font-size:28px"><span class="tab b">04 / 100</span></div><div style="position:absolute;left:64px;right:64px;top:260px;direction:ltr"><div class="en" style="font-size:104px">Before tool<br>number 16,<br>map the <span style="color:var(--brand-blue-bright)">workflow.</span></div></div><div class="on-blue" style="position:absolute;right:64px;left:64px;bottom:160px"><div class="t" style="font-size:44px;font-weight:700">قبل الأداة رقم 16، ارسم الـworkflow</div></div><div class="mono" style="position:absolute;left:64px;bottom:64px;font-size:22px;color:var(--white)">HOSSAM GOURAAN</div>'],
+ ['Reel cover · master',W,1920,A.reel({photo:'p3',tab:'04 / 100',lines:['إنت بقيت','<span class="mk">الـBottleneck</span>']})],
+ ['Reel cover · text-led',W,1920,A.reel({tab:'12 / 100',lines:['المكتب','مش غلط']})],
+ ['Story · next-episode teaser',W,1920,'<div class="f f-black" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:W,h:1920,head:.16,top:.44,cx:.6})+'<div class="f f-black" style="left:0;right:0;top:0;height:780px"></div><div style="position:absolute;top:260px;right:64px;font-size:34px"><span class="tab b">05 / 100 · الخميس</span></div><div style="position:absolute;right:64px;left:64px;top:400px"><div class="t" style="font-size:44px;font-weight:600;color:var(--grey-400)">السؤال الجاي</div><h1 class="d" style="font-size:110px;line-height:1.25;margin-top:14px">إيه اللي بيحصل<br>لما الشغل يكبر؟</h1></div>'],
+ ['Launch announcement',W,H,'<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;top:64px;right:64px;font-size:28px"><span class="tab">01 / 100</span></div><div class="on-blue" style="position:absolute;right:64px;left:64px;top:220px"><h1 class="d" style="font-size:170px;line-height:1.1">100 حلقة.</h1><div class="t" style="font-size:48px;font-weight:700;margin-top:20px">كل أسبوع سؤال واحد.</div><div style="margin-top:70px;display:flex;justify-content:flex-end">'+HG.journey({done:1,cell:38,gap:12,ground:'blue'})+'</div></div><div class="f f-black" style="left:0;right:0;top:auto;height:260px"></div><div style="position:absolute;right:64px;bottom:100px"><div class="mono" style="font-size:30px;text-align:right">08.10.2026 · 8 PM CAIRO</div><div class="t" style="font-size:30px;font-weight:600;margin-top:10px;text-align:right">كل خميس على يوتيوب</div></div><div class="mono" style="position:absolute;left:64px;bottom:100px;font-size:30px;color:var(--brand-blue-bright)">@GOURAAN</div>']
+];
+var g=''; Q.forEach(function(q){ g+='<div>'+HG.ab(q[1],q[2],s2,q[3])+'<div class="hg-cap"><b>'+q[0]+'</b></div></div>'; });
+HG.mount('#b',g);
+</script>
+</body>
+</html>

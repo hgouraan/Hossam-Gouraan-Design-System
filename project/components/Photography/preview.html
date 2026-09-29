@@ -1,0 +1,47 @@
+<!-- @dsCard page group="01 Master Identity" height=1862 width=1200 subtitle="Black T-shirt · blue world · real editorial portraiture — crops, placement, light, grade" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Photography</title><style>body{margin:0}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · photography</div>
+  <h2 class="hg-h">The same man, the same shirt, the same blue.</h2>
+  <p class="hg-p">The photograph is the most recognisable asset in the system. The uniform is fixed — plain black crew-neck T-shirt, black trousers, black watch — and the world is fixed: a blue backdrop lit by a single hard beam. Faces are never retouched beyond dust and colour balance; never mirrored, never reshaped, never replaced.</p>
+
+  <div class="hg-kicker">Source set</div>
+  <div class="hg-row" id="src"></div>
+
+  <div class="hg-kicker">Crops — placed by the head, not by the file</div>
+  <div class="hg-row" id="crops"></div>
+
+  <div class="hg-kicker">Photo + layout</div>
+  <div class="hg-row" id="lay"></div>
+
+  <div class="cols">
+    <ul class="hg-spec"><li><b>Lighting</b> one hard key from camera-left/high, a narrow blue beam across the backdrop, deep fall-off on the shirt. Shadows stay dark; no fill-flat beauty light.</li><li><b>Background</b> seamless blue paper or wall lit with blue gel — always in the #0A1748 → #2047F4 → bright beam range. No rooms, offices, city skylines or bookshelves.</li><li><b>Contrast</b> high. Blacks in the shirt can crush; skin must keep texture.</li></ul>
+    <ul class="hg-spec"><li><b>Skin</b> natural, warm, real. Remove only temporary blemishes. No smoothing, no slimming, no eye enlarging.</li><li><b>Grade</b> neutral skin, blues pushed toward #2047F4, blacks neutral (not blue). The optional mono treatment (grayscale + slight contrast) is for text-heavy covers only, and always sits on a blue Field.</li><li><b>Cut-outs</b> allowed to place him on a flat blue Field (template C, covers). Always meet the bottom edge — he never floats.</li></ul>
+    <ul class="hg-spec"><li><b>Gaze</b> to camera for thumbnails and profiles (trust, CTR). Looking off-frame toward the headline for editorial covers and articles.</li><li><b>Placement</b> subject faces or looks INTO the Field. Never flip an image to make that work — shoot both sides.</li><li><b>Set bridge (flag)</b> the V1 recording set is a home set with softboxes and warm practicals (Production §6–7), not the blue studio. Graphics are built to work over any background. A blue wall or paper backdrop behind the chair would join video to the photo world; that is an <b>optional production upgrade</b>, not assumed.</li><li><b>Next shoot list</b> headshot tight; waist-up both sides; looking away left and right; hands mid-explanation; standing full-length; seated on the stool with notebook; laptop at the desk — all in the same uniform and light.</li></ul>
+  </div>
+</div>
+<script>
+var s=''; [['p1','P1 · SEATED CLOSE'],['p2','P2 · STANDING WAIST-UP'],['p3','P3 · STOOL + BEAM']].forEach(function(p){
+  s+='<div>'+HG.ab(1122,1402,260/1122,'<img class="ph" style="left:0;top:0;width:1122px" src="'+HG.photos[p[0]].src+'">')+'<div class="hg-cap"><b>'+p[1]+'</b></div></div>'; });
+s+='<div>'+HG.ab(1122,1402,260/1122,'<div class="f f-blue" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',cut:true,w:1122,h:1402,head:.2,top:.14,cx:.62,box:false}))+'<div class="hg-cap"><b>CUT-OUT ON FLAT BLUE</b></div></div>';
+HG.mount('#src',s);
+var c=''; [['HEADSHOT','p1',.62,.1],['CHEST-UP','p2',.42,.14],['WAIST-UP','p3',.28,.16],['SEATED / FULL','p3',.19,.12],['MONO (OPTIONAL)','p1',.42,.14]].forEach(function(x,i){
+  var inner = i==4 ? '<div class="f f-blue" style="left:0;right:0"></div>'+HG.portrait({photo:'p1',cut:true,w:600,h:750,head:x[2],top:x[3],cx:.5,box:false,cls:'mono-img'}) : HG.portrait({photo:x[1],w:600,h:750,head:x[2],top:x[3],cx:.5});
+  c+='<div>'+HG.ab(600,750,206/600,inner)+'<div class="hg-cap"><b>'+x[0]+'</b></div></div>'; });
+HG.mount('#crops',c);
+var l='';
+l+='<div>'+HG.ab(1280,720,.28,HG.thumb({tpl:'B',photo:'p2',field:'black',lines:['الموضوع','يمين'],size:150}))+'<div class="hg-cap"><b>Subject right · title left</b></div></div>';
+l+='<div>'+HG.ab(1280,720,.28,HG.thumb({tpl:'A',photo:'p1',field:'blue',lines:['الموضوع','يسار'],size:150}))+'<div class="hg-cap"><b>Subject left · title right</b></div></div>';
+l+='<div>'+HG.ab(1280,720,.28,HG.thumb({tpl:'C',photo:'p1',lines:['قريب','جدًا'],size:190,head:.8,top:.1,cx:.24}))+'<div class="hg-cap"><b>Close crop + oversized type</b></div></div>';
+l+='<div>'+HG.ab(1280,720,.28,'<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="left:120px;width:620px;top:120px;bottom:0"></div>'+HG.portrait({photo:'p3',cut:true,w:1280,h:720,head:.5,top:.04,cx:.34,box:false})+'<div style="position:absolute;right:48px;width:440px;bottom:92px"><h1 class="d" style="font-size:120px">يكسر<br>الإطار</h1></div>')+'<div class="hg-cap"><b>Portrait breaking the Field</b></div></div>';
+l+='<div>'+HG.ab(1280,720,.28,HG.portrait({photo:'p3',w:1280,h:720,head:.36,top:.28,cx:.6})+'<div style="position:absolute;right:48px;top:48px;font-size:24px"><span class="tab">FULL-BLEED · 04 / 100</span></div>')+'<div class="hg-cap"><b>Full-bleed + small label</b></div></div>';
+l+='<div>'+HG.ab(1280,720,.28,'<div class="f f-navy" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:420,h:520,x:48,y:152,head:.42,top:.12,cx:.5})+'<div style="position:absolute;right:48px;width:680px;bottom:92px"><h1 class="d" style="font-size:110px">صورة صغيرة<br>فكرة كبيرة</h1></div>')+'<div class="hg-cap"><b>Window crop on navy</b></div></div>';
+HG.mount('#lay',l);
+</script>
+</body>
+</html>

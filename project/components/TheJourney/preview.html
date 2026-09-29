@@ -1,0 +1,50 @@
+<!-- @dsCard page group="01 Master Identity" height=1206 width=1200 subtitle="The master device V1 was missing: the 100-week commitment as a counter and a 5×20 grid that fills over time" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>The 100 Journey</title><style>body{margin:0}
+.leg{display:flex;gap:26px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--ink-muted);margin:10px 0 26px}
+.leg span{display:inline-flex;gap:8px;align-items:center}
+.leg i{width:12px;height:12px;display:inline-block}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">01 — Master identity · the 100 Journey</div>
+  <h2 class="hg-h">100 squares. One per week. It fills up.</h2>
+  <p class="hg-p">The strategy's most permanent fact is the 100-episode weekly commitment: the audience's transformation, the creator's transformation, and a library that compounds (Master Strategy §2, §18). V1 had no picture of it. The grid is 5 rows × 20, matching the five 20-episode horizons in §12. It gets more meaningful every week, it's owned by no season, and it keeps working long after Season 01 ends.</p>
+
+  <div id="big" style="margin-bottom:8px"></div>
+  <div class="leg"><span><i style="background:var(--brand-blue)"></i>PUBLISHED</span><span><i style="background:var(--white)"></i>THIS EPISODE</span><span><i style="box-shadow:inset 0 0 0 2px var(--grey-700)"></i>AHEAD</span><span>ROW = A 20-EPISODE HORIZON (§12) · A SEASON MAY LABEL ITS ROW</span></div>
+
+  <div class="hg-kicker">Where it appears</div>
+  <div class="hg-row" id="apps" style="gap:16px"></div>
+
+  <div class="hg-row" style="gap:40px;margin-top:6px">
+    <ul class="hg-spec" style="width:520px">
+      <li><b>Counter</b> <span class="mono" style="font-size:11px">04 / 100</span>: Index Tab on thumbnails (optional), lower third, episode card, end card, carousel footer. Western digits, two digits.</li>
+      <li><b>Grid</b>: channel banner, website, episode card, end card, milestone posts (10, 20, 50, 100). Never on thumbnails; too small to read.</li>
+      <li><b>States</b>: blue = published, white = this episode, outline = ahead. On blue ground: black / white / deep-blue outline.</li>
+    </ul>
+    <ul class="hg-spec" style="width:520px">
+      <li><b>Core vs extra</b>: only core journey episodes get a square and a count. Technical builds, tools and experiments (§21) carry <b>no count</b>, so the grid stays honest.</li>
+      <li><b>Companion episodes</b> (YouTube Philosophy §14–15) share their parent's square and show e.g. <span class="mono" style="font-size:11px">07+ / 100</span>.</li>
+      <li><b>Seasons</b> may label their row (S01 = the first 20) but never recolour it. Colour stays master.</li>
+    </ul>
+  </div>
+</div>
+<script>
+var big='<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:96px;top:90px">'+HG.journey({done:4,cell:62,gap:22})+'</div>'
+ + [0,1,2,3,4].map(function(r){ return '<div class="mono" style="position:absolute;left:40px;top:'+(106+r*84)+'px;font-size:20px;color:var(--grey-400)">'+String(r*20+1).padStart(2,'0')+'–'+String(r*20+20).padStart(3,'0')+'</div>'; }).join('')
+ + '<div class="mono" style="position:absolute;right:96px;bottom:60px;font-size:30px">04 / 100</div><div class="t" style="position:absolute;left:180px;bottom:58px;font-size:26px;font-weight:600;color:var(--grey-400)">كل خميس · 8 م بتوقيت القاهرة</div>';
+HG.mount('#big', HG.ab(1920,620,1136/1920,big));
+var A=HG.assets, a='';
+var endc='<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;left:96px;top:250px;width:760px;height:428px;border:3px solid var(--grey-700)"></div><div style="position:absolute;right:96px;top:220px;width:820px"><div class="t" style="font-size:34px;font-weight:600;color:var(--grey-400)">السؤال الجاي</div><h1 class="d" style="font-size:90px;margin-top:18px;line-height:1.25">إيه اللي بيحصل<br>لما الشغل يكبر؟</h1><div style="margin-top:50px;display:flex;justify-content:flex-end">'+HG.journey({done:5,cell:24,gap:9})+'</div></div><div style="position:absolute;right:96px;bottom:90px;display:flex;align-items:center;gap:30px"><span class="mono" style="font-size:22px;color:var(--grey-400)">05 / 100</span><div class="d" style="font-size:52px">حسام جعران<span class="stop"></span></div></div>';
+a+='<div>'+HG.ab(1920,1080,360/1920,endc)+'<div class="hg-cap"><b>End card</b> · next question + grid</div></div>';
+var card='<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:64px;top:64px;font-size:30px"><span class="tab b">04 / 100</span></div><div class="num" style="position:absolute;left:40px;top:40px;font-size:400px;color:var(--brand-blue)">04</div><div style="position:absolute;right:64px;left:64px;top:600px"><h1 class="d" style="font-size:110px;line-height:1.25">شركتك مش محتاجة<br><span class="mk">موظفين أكتر</span></h1><div style="margin-top:60px;display:flex;justify-content:flex-end">'+HG.journey({done:4,cell:36,gap:12})+'</div></div><div class="mono" style="position:absolute;right:64px;bottom:64px;font-size:22px;color:var(--grey-400)">NEW EPISODE · THURSDAY 8 PM</div>';
+a+='<div>'+HG.ab(1080,1350,216/1080,card)+'<div class="hg-cap"><b>Episode card</b> · master</div></div>';
+var mile='<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:64px;top:64px;font-size:30px"><span class="tab">20 / 100</span></div><div class="on-blue" style="position:absolute;right:64px;left:64px;top:260px"><h1 class="d" style="font-size:150px;line-height:1.15">20 حلقة.</h1><div class="t" style="font-size:40px;font-weight:600;margin-top:20px">اللي اتعلمته، واللي غيّرت رأيي فيه.</div><div style="margin-top:80px;display:flex;justify-content:flex-end">'+HG.journey({done:21,cell:36,gap:12,ground:'blue'}).replace(/background:var\(--white\)/,'background:transparent')+'</div></div>';
+a+='<div>'+HG.ab(1080,1350,216/1080,mile)+'<div class="hg-cap"><b>Milestone post</b> · 20 / 100</div></div>';
+a+='<div>'+HG.ab(1440,900,290/1440,A.web({done:4}))+'<div class="hg-cap"><b>Website</b></div></div>';
+HG.mount('#apps',a);
+</script>
+</body>
+</html>

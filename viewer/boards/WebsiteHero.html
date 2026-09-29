@@ -1,0 +1,24 @@
+<!-- @dsCard page group="02 Master Content Language" height=1982 width=1200 subtitle="The home of the library: the journey, the latest question, sources — desktop and mobile" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Website hero</title><style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · website</div>
+  <h2 class="hg-h">The home of a library, not a landing page.</h2>
+  <p class="hg-p">The site exists so the body of work compounds: episodes, seasons and sources you can come back to when facing a decision (Master §18; Distribution §32). The hero describes the project factually (100 episodes, one question a week) and shows the journey grid. It doesn't claim a positioning the work hasn't earned yet. Navigation is episodes, seasons, sources, about. No funnel, no "Book a call" (§19: trust before offer).</p>
+  <div id="d" style="margin-bottom:20px"></div>
+  <div class="hg-row" id="m" style="align-items:flex-start"></div>
+</div>
+<script>
+var W=1440,H=900,A=HG.assets;
+var below = '<div class="f f-paper" style="left:0;right:0"></div><div style="position:absolute;right:64px;top:56px;left:64px"><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink-900);padding-bottom:16px"><div class="d8" style="font-size:44px">الحلقات</div><span class="mono" style="font-size:13px;color:var(--grey-500)">SEASON 01 · 01–20</span></div>'
+ + [['04','شركتك مش محتاجة موظفين أكتر','SOURCES 6'],['03','إنت بقيت الـBottleneck','SOURCES 4'],['02','ارسم الـworkflow الأول','SOURCES 5']].map(function(r){return '<div style="display:flex;gap:30px;align-items:baseline;border-bottom:1px solid var(--grey-200);padding:22px 0"><span class="num" style="font-size:40px;color:var(--brand-blue)">'+r[0]+'</span><span class="d8" style="font-size:32px;flex:1">'+r[1]+'</span><span class="mono" style="font-size:12px;color:var(--grey-500)">'+r[2]+'</span></div>'}).join('')+'</div>';
+HG.mount('#d', HG.ab(W,H,1136/W,A.web({done:4})) + HG.ab(W,380,1136/W,below));
+var mob = '<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="left:0;right:0;height:400px"></div>'+HG.portrait({photo:'p3',cut:true,w:390,h:400,head:.36,top:.2,cx:.5,box:false})
+ + '<div style="position:absolute;left:0;right:0;top:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px"><div class="d" style="font-size:22px">حسام جعران<span class="stop"></span></div><div class="mono" style="font-size:12px">MENU</div></div>'
+ + '<div style="position:absolute;right:20px;left:20px;top:430px"><div class="mono" style="font-size:10px;color:var(--brand-blue-bright);text-align:right">BUILDER · OPERATOR · RESEARCHER</div><h1 class="d" style="font-size:52px;line-height:1.2;margin-top:14px">100 حلقة.<br>كل أسبوع <span class="mk">سؤال</span>.</h1><p class="t" style="font-size:15px;line-height:1.8;color:var(--grey-400);margin-top:14px">رحلة أسبوعية في الشغل والبيزنس والأنظمة والقرارات.</p><div style="margin-top:22px;display:flex;justify-content:flex-end">'+HG.journey({done:4,cell:13,gap:4})+'</div><div style="display:flex;justify-content:space-between;margin-top:10px"><span class="mono" style="font-size:11px;color:var(--grey-400)">04 / 100</span><span class="t" style="font-size:12px;color:var(--grey-400)">كل خميس · 8 م</span></div></div>';
+HG.mount('#m','<div>'+HG.ab(390,844,300/390,mob,'ring')+'<div class="hg-cap"><b>Mobile 390</b> · seam turns horizontal</div></div><ul class="hg-spec" style="width:520px;margin-inline-start:30px"><li><b>Hero line</b> is a description of the project, not a positioning claim: "100 حلقة. كل أسبوع سؤال." It becomes stale only if the project changes.</li><li><b>Nav</b> الحلقات · المواسم · المصادر · عنّي · EN. Seasons live one level down; no season in the top nav.</li><li><b>Proof</b> is the library: episode list with source counts (research is part of the identity, §11).</li><li><b>Reading pages</b> Paper surface, ar-body 18 / 1.85, Archivo numerals for episode numbers.</li><li><b>EN version</b> mirrors: portrait right, English line in Archivo from the left margin.</li></ul>');
+</script>
+</body>
+</html>

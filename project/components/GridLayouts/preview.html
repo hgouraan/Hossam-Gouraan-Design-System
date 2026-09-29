@@ -1,0 +1,48 @@
+<!-- @dsCard page group="02 Master Content Language" height=1219 width=1200 subtitle="12 columns, proportional margins, five layouts, the seam rotates for vertical" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Grid</title><style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · grid</div>
+  <h2 class="hg-h">Asymmetric by default.</h2>
+  <p class="hg-p">Every artboard uses 12 columns with a proportional margin (≈ 5–6 % of the short side). Seams fall on column 5 or 7 — never 6 — so the page is never split in half. Headlines hang from the right margin (Arabic start edge) and sit in the lower half; metadata lives in the top band. Empty space is deliberate: at least a third of every Field stays empty.</p>
+  <div class="hg-row" id="five"></div>
+  <hr class="hg-sep">
+  <div class="hg-kicker">Same content · three formats</div>
+  <p class="hg-p">The seam turns horizontal in vertical formats: portrait on top, Field below, headline in the lower-middle safe band. Nothing else changes — same type, same Tab, same Strike.</p>
+  <div class="hg-row" id="adapt" style="align-items:flex-end"></div>
+  <div class="hg-row">
+    <ul class="hg-spec" style="width:540px">
+      <li><b>1280 × 720</b> margin 48 · gutter 24 · seam col 7 (56 / 44)</li>
+      <li><b>1920 × 1080</b> margin 96 (title-safe) · gutter 32 · seam col 5 or 7</li>
+      <li><b>1080 × 1350</b> margin 64 · gutter 24 · seam col 5 / 7 or horizontal at 55 %</li>
+      <li><b>1080 × 1920</b> margin 64 sides · safe top 240 · safe bottom 440 · right 140</li>
+    </ul>
+    <ul class="hg-spec" style="width:540px">
+      <li><b>Image / text ratio</b> 44 / 56 (default), 33 / 67 (portrait-led), 0 / 100 (text-led).</li>
+      <li><b>Headline block</b> max 8 of 12 columns; subtitle max 6; body max 5.</li>
+      <li><b>Top band</b> (first 12 % of height) holds only the Index Tab and metadata.</li>
+      <li><b>Never</b> centre a headline over a centred portrait. Tension comes from offset.</li>
+    </ul>
+  </div>
+</div>
+<script>
+var W=1080,H=1350,S=176/1080,M=64;
+var L=[
+ ['IMAGE | TYPE', HG.portrait({photo:'p2',w:448,h:H,x:0,head:.2,top:.2,cx:.5})+'<div class="f f-black" style="right:0;width:632px"></div><div style="position:absolute;right:64px;width:520px;bottom:150px"><h1 class="d" style="font-size:112px">صورة<br>وحقل</h1></div><div style="position:absolute;right:64px;top:64px;font-size:30px"><span class="tab b">01</span></div>'],
+ ['TYPE | IMAGE', HG.portrait({photo:'p3',w:448,h:H,x:632,head:.2,top:.25,cx:.45})+'<div class="f f-blue" style="left:0;width:632px"></div><div class="on-blue" style="position:absolute;right:512px;width:520px;bottom:150px"><h1 class="d" style="font-size:112px">حقل<br>وصورة</h1></div><div style="position:absolute;right:512px;top:64px;font-size:30px"><span class="tab">02</span></div>'],
+ ['FULL IMAGE + TYPE', HG.portrait({photo:'p3',w:W,h:H,head:.26,top:.2,cx:.62})+'<div style="position:absolute;right:64px;left:64px;bottom:0;height:420px;background:var(--black)"></div><div style="position:absolute;right:64px;left:120px;bottom:120px"><h1 class="d" style="font-size:96px">صورة كاملة</h1><div class="t" style="font-size:30px;font-weight:600;margin-top:20px;color:var(--grey-400)">والنص على حقل صغير</div></div>'],
+ ['FULL SOLID + SMALL PORTRAIT', '<div class="f f-blue" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:320,h:400,x:64,y:64,head:.4,top:.14,cx:.5})+'<div class="on-blue" style="position:absolute;right:64px;left:64px;bottom:150px"><h1 class="d" style="font-size:120px">الفكرة أولًا<br>والوجه توقيع</h1></div>'],
+ ['LARGE TYPE + SMALL META', '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:64px;left:64px;top:360px"><h1 class="d" style="font-size:200px">نص<br><span class="hi">ضخم</span></h1></div><div class="mono" style="position:absolute;right:64px;bottom:64px;font-size:24px;color:var(--grey-400)">HOSSAM GOURAAN · NOTES · 12</div>']
+];
+var h=''; L.forEach(function(l){ h+='<div>'+HG.ab(W,H,S,l[1]+HG.grid(W,H,M,12,24))+'<div class="hg-cap"><b>'+l[0]+'</b></div></div>'; });
+HG.mount('#five',h);
+var a='';
+a+='<div>'+HG.ab(1280,720,.38,HG.thumb({tpl:'A',photo:'p2',field:'black',lines:['إنت بقيت','<span class="mk">الـBottleneck</span>'],tab:'05 / 100'})+HG.grid(1280,720,48,12,24))+'<div class="hg-cap"><b>16:9</b> seam vertical</div></div>';
+a+='<div>'+HG.ab(1080,1350,.26,HG.portrait({photo:'p2',w:448,h:1350,x:0,head:.2,top:.22,cx:.5})+'<div class="f f-black" style="right:0;width:632px"></div><div style="position:absolute;right:64px;width:520px;bottom:160px"><h1 class="d" style="font-size:110px">إنت بقيت<br><span class="mk">الـBottleneck</span></h1></div><div style="position:absolute;top:64px;right:64px;font-size:30px"><span class="tab b">05 / 100</span></div>'+HG.grid(1080,1350,64,12,24))+'<div class="hg-cap"><b>4:5</b> seam vertical</div></div>';
+a+='<div>'+HG.ab(1080,1920,.2,HG.portrait({photo:'p2',w:1080,h:1000,x:0,y:0,head:.34,top:.2,cx:.5})+'<div class="f f-black" style="top:1000px;left:0;right:0"></div><div style="position:absolute;right:64px;left:140px;top:1060px"><h1 class="d" style="font-size:150px">إنت بقيت<br><span class="mk">الـBottleneck</span></h1></div><div style="position:absolute;top:260px;right:160px;font-size:34px"><span class="tab b">05 / 100</span></div>'+HG.grid(1080,1920,64,12,24)+'<div class="sz-no" style="left:0;right:0;top:0;height:240px"></div><div class="sz-no" style="left:0;right:0;bottom:0;height:440px"></div><div class="sz-no" style="right:0;top:240px;bottom:440px;width:140px"></div>')+'<div class="hg-cap"><b>9:16</b> seam horizontal</div></div>';
+HG.mount('#adapt',a);
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- @dsCard page group="05 System" height=2790 width=1200 subtitle="Master-only pieces first (no season anywhere), then the Season 01 layer on the same templates" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Stress test</title><style>body{margin:0}</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">05 — System · stress test</div>
+  <h2 class="hg-h">Master first. Season on top.</h2>
+  <p class="hg-p">Everything is built from the same helpers (HG.thumb, HG.assets) with different copy, photo and ground. The first block contains no season at all and has to stand on its own. The last block shows the Season 01 layer on the same templates. Sample copy comes from the Voice Guide and YouTube Philosophy examples; numbers are placeholders until sourced.</p>
+  <div class="hg-kicker">Master · YouTube thumbnails × 6</div>
+  <div class="hg-row" id="t" style="gap:16px"></div>
+  <div class="hg-kicker">Master · carousel covers · cards · table · reels</div>
+  <div class="hg-row" id="s" style="gap:14px;align-items:flex-end"></div>
+  <div class="hg-kicker">Master · platforms · web</div>
+  <div class="hg-row" id="p" style="gap:16px"></div>
+  <div class="hg-kicker">Master · in-video (talk, evidence, journey)</div>
+  <div class="hg-row" id="v" style="gap:16px"></div>
+  <hr class="hg-sep">
+  <div class="hg-kicker">+ Season 01 layer on the same templates</div>
+  <div class="hg-row" id="s1" style="gap:16px;align-items:flex-end"></div>
+</div>
+<script>
+var A=HG.assets;
+var T=[
+ {tpl:'A',photo:'p1',field:'black',lines:['شركتك مش محتاجة','<span class="mk">موظفين أكتر</span>'],tab:'04 / 100'},
+ {tpl:'B',photo:'p2',field:'blue',lines:['ارسم','<span class="mk">الـworkflow</span> الأول']},
+ {tpl:'C',photo:'p3',lines:['إنت بقيت','الـBottleneck']},
+ {tpl:'A',photo:'p3',field:'black',lines:['المكتب','<span class="hi">مش غلط</span>'],tab:'12 / 100'},
+ {tpl:'B',photo:'p1',field:'black',lines:['راجع النظام','<span class="mk">قبل الموظف</span>']},
+ {tpl:'C',photo:'p2',lines:['قبل الأداة','رقم 16'],head:.5,cx:.2}
+];
+var h=''; T.forEach(function(o){ h+=HG.ab(1280,720,368/1280,HG.thumb(o)); }); HG.mount('#t',h);
+var s2=127/1080, s='';
+s+=HG.ab(1080,1350,s2,A.carouselCover({ground:'black',lines:['الموظف مش عايز','يشتغل؟ <span class="mk">راجعت إيه؟</span>'],size:110,topic:'PEOPLE'}));
+s+=HG.ab(1080,1350,s2,A.carouselCover({ground:'blue',lines:['قبل الأداة','رقم 16'],topic:'SYSTEMS'}));
+s+=HG.ab(1080,1350,s2,A.carouselCover({ground:'black',photo:'p1',lines:['كل قرار','<span class="mk">بيعدي عليك</span>'],size:110,topic:'MANAGEMENT'}));
+s+=HG.ab(1080,1350,s2,A.card({quote:true,text:'الخطط لا قيمة لها، لكن التخطيط هو كل شيء.',by:'دوايت أيزنهاور'}));
+s+=HG.ab(1080,1350,s2,A.card({ground:'blue',tab:'INSIGHT',text:'ساعات بنلوم الموظف قبل ما نراجع <span class="mk">النظام</span> اللي حطيناه فيه.',size:84}));
+s+=HG.ab(1080,1350,s2,A.table({title:'قبل ما تعيّن',rows:[['السؤال','لو لأ'],['فاهم المطلوب؟','التعريف'],['عنده authority؟','الصلاحيات'],['الـworkflow واضح؟','النظام']],size:80,source:'FROM EPISODE 04 / 100'}));
+s+=HG.ab(1080,1920,s2,A.reel({photo:'p3',tab:'04 / 100',lines:['إنت بقيت','<span class="mk">الـBottleneck</span>']}));
+s+=HG.ab(1080,1920,s2,A.reel({tab:'12 / 100',lines:['المكتب','مش غلط']}));
+HG.mount('#s',s);
+var p='';
+p+='<div>'+HG.ab(2560,1440,560/2560,A.ytBanner({done:4}))+'<div class="hg-cap">YouTube banner</div></div>';
+p+='<div>'+HG.ab(1440,900,560/1440,A.web({done:4}))+'<div class="hg-cap">Website hero</div></div>';
+p+='<div>'+HG.ab(851,315,560/851,A.fbCover({done:4}))+'<div class="hg-cap">Facebook cover</div></div>';
+p+='<div>'+HG.ab(1584,396,560/1584,A.liCover({done:4}))+'<div class="hg-cap">LinkedIn cover</div></div>';
+HG.mount('#p',p);
+var v=''; ['keyword','lower','statement','question','revised','next'].forEach(function(k){ v+=HG.ab(1920,1080,368/1920,A.vg(k)); }); HG.mount('#v',v);
+var q='';
+q+=HG.ab(1280,720,368/1280,HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['دفعنا كتير','<span class="s brk">فلازم</span> نكمّل'],tab:'S01 · 08 / 100'}));
+q+=HG.ab(1280,720,368/1280,HG.thumb({tpl:'B',photo:'p2',field:'blue',lines:['خبرتك','<span class="s brk">كفاية</span> تقرر'],tab:'S01 · 15 / 100'}));
+q+=HG.ab(1080,1920,130/1080,A.reel({photo:'p3',tab:'S01 · 11 / 100',lines:['الخطة','<span class="s brk">واقعية</span>']}));
+q+=HG.ab(1920,1080,560/1920,A.seasonCover());
+HG.mount('#s1',q);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- @dsCard page group="02 Master Content Language" height=611 width=1200 subtitle="Six slides, one line of thought — built from the episode's diagnostic questions, not generic advice" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Carousel</title><style>body{margin:0}
+.rail{display:flex;gap:0;direction:rtl;overflow:hidden}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · carousel</div>
+  <h2 class="hg-h">Six slides, one line of thought.</h2>
+  <p class="hg-p">Read right to left. The rhythm follows the master editorial behaviour: <b style="color:var(--ink)">question → case → diagnosis → framework → context → final thought</b>. Grounds alternate (black, paper, blue, navy). Three things never move: the counter Tab at top-right, the 64 px start edge, and the mono footer. One Mark in the whole carousel; during a season, the season gesture may take the hook slide instead.</p>
+  <div class="rail" id="c"></div>
+  <div class="hg-row" style="margin-top:22px">
+    <ul class="hg-spec" style="width:540px"><li><b>01 Question</b> black, display 130, one Mark. <b>02 Case</b> paper, concrete situation first (Voice §9). <b>03 Diagnosis</b> blue, one spoken sentence.</li></ul>
+    <ul class="hg-spec" style="width:540px"><li><b>04 Framework</b> navy, numbered questions. <b>05 Context</b> "it depends on…", no always/never (Voice §15). <b>06 Final thought</b> black, one line + journey count + signature. No "Link in bio" by default.</li></ul>
+  </div>
+</div>
+<script>
+var W=1080,H=1350,s=189/1080;
+var tab=function(n,c){ return '<div style="position:absolute;top:64px;right:64px;font-size:28px"><span class="tab'+(c||'')+'">'+n+' / 06</span></div>'; };
+var ft=function(c){ return '<div class="mono" style="position:absolute;left:64px;bottom:64px;font-size:22px;color:'+(c||'var(--grey-400)')+'">HOSSAM GOURAAN · 07 / 100</div><div class="mono" style="position:absolute;right:64px;bottom:64px;font-size:22px;color:'+(c||'var(--grey-400)')+'">←</div>'; };
+var S=[
+ '<div class="f f-black" style="left:0;right:0"></div>'+tab('01',' b')+'<div style="position:absolute;right:64px;left:64px;top:480px"><h1 class="d" style="font-size:124px;line-height:1.25">الموظف مش عايز<br>يشتغل؟ <span class="mk">راجعت إيه؟</span></h1></div>'+ft(),
+ '<div class="f f-paper" style="left:0;right:0"></div>'+tab('02')+'<div style="position:absolute;right:64px;left:64px;top:300px"><div class="d8" style="font-size:72px">موظف جديد، أسبوعين</div><p class="t" style="font-size:40px;line-height:1.8;margin-top:40px;font-weight:500">مفيش وصف واضح للدور. كل قرار صغير محتاج موافقة. ومحدش قاله هيتحاسب على إيه. وبعدين بنقول: مش عايز يشتغل.</p></div>'+ft('var(--grey-500)'),
+ '<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue">'+tab('03')+'</div><div class="on-blue" style="position:absolute;right:64px;left:64px;top:420px"><h1 class="d" style="font-size:100px;line-height:1.35">ساعات بنلوم الموظف قبل ما نراجع النظام اللي حطيناه فيه.</h1></div><div class="on-blue">'+ft('var(--white)')+'</div>',
+ '<div class="f f-navy" style="left:0;right:0"></div>'+tab('04',' b')+'<div style="position:absolute;right:64px;left:64px;top:210px"><div class="d8" style="font-size:66px">قبل ما تحكم، راجع</div>'+[['01','فاهم المطلوب منه؟'],['02','عنده authority؟'],['03','الـworkflow واضح؟'],['04','عارف هيتحاسب على إيه؟']].map(function(r){return '<div style="display:flex;gap:30px;align-items:center;border-top:3px solid var(--brand-navy-raised);padding:28px 0;margin-top:16px"><span class="num" style="font-size:90px;color:var(--brand-blue-bright)">'+r[0]+'</span><span class="d8" style="font-size:56px">'+r[1]+'</span></div>'}).join('')+'</div>'+ft('var(--brand-blue-soft)'),
+ '<div class="f f-black" style="left:0;right:0"></div>'+HG.portrait({photo:'p3',w:W,h:560,head:.56,top:.12,cx:.55})+tab('05',' b')+'<div style="position:absolute;right:64px;left:64px;top:640px"><div class="mono" style="font-size:24px;color:var(--brand-blue-bright);text-align:right">CONTEXT</div><h1 class="d8" style="font-size:62px;line-height:1.45;margin-top:20px">ده مش معناه إن الموظف عمره ما بيكون المشكلة. معناه إننا لسه ما اختبرناهوش أصلًا.</h1></div>'+ft(),
+ '<div class="f f-black" style="left:0;right:0"></div>'+tab('06',' b')+'<div style="position:absolute;right:64px;left:64px;top:430px"><h1 class="d" style="font-size:118px;line-height:1.2">راجع النظام<br>قبل الموظف.</h1></div><div style="position:absolute;right:64px;bottom:150px"><div class="d" style="font-size:54px">حسام جعران<span class="stop"></span></div></div><div class="mono" style="position:absolute;right:64px;bottom:64px;font-size:22px;color:var(--brand-blue-bright)">07 / 100 · FULL EPISODE ON YOUTUBE</div>'
+];
+var h=''; S.forEach(function(x){ h+=HG.ab(W,H,s,x); });
+HG.mount('#c',h);
+</script>
+</body>
+</html>

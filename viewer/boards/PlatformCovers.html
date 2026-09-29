@@ -1,0 +1,37 @@
+<!-- @dsCard page group="02 Master Content Language" height=1711 width=1200 subtitle="Master covers: name, role, the 100 Journey and the schedule — no tagline, no season" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Platform covers</title><style>body{margin:0}
+.phone{width:260px;background:var(--black);border:1px solid var(--rule);padding:16px 14px;direction:rtl;font-family:var(--font-ar-text)}
+.phone .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:14px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · platform identity</div>
+  <h2 class="hg-h">Covers say who, and where in the journey. Not a slogan.</h2>
+  <p class="hg-p">V1 covers carried "أبني، أجرّب، وأسأل" and "question the obvious", which was Season 01 thinking dressed as permanent positioning. V2 covers carry only what the strategy supports: the name, the role (§6), the 100 Journey and the V1 publishing slot (Distribution §36; edit it when the slot changes). During a season, the cover can add a small season line, but it never replaces the master content. Everything important stays inside the smallest crop (dashed).</p>
+
+  <div class="hg-kicker">YouTube banner · 2560 × 1440 · safe 1546 × 423</div>
+  <div class="hg-row" id="yt"></div>
+  <div class="hg-row" id="fbli"></div>
+  <div class="hg-kicker">Profiles</div>
+  <div class="hg-row" id="prof" style="align-items:flex-start"></div>
+</div>
+<script>
+var A=HG.assets, yt=A.ytBanner({done:4});
+var ytz='<div class="sz" style="left:507px;top:508px;width:1546px;height:423px"></div><div class="sz-l" style="left:515px;top:470px;font-size:26px">ALL DEVICES 1546 × 423</div>';
+HG.mount('#yt','<div>'+HG.ab(2560,1440,620/2560,yt+ytz)+'<div class="hg-cap"><b>Full canvas (TV)</b> with the all-device crop</div></div><div>'+HG.ab(1546,423,490/1546,'<div style="position:absolute;left:-507px;top:-508px;width:2560px;height:1440px">'+yt+'</div>')+'<div class="hg-cap"><b>Mobile / all-device crop</b>: name, role, grid, slot survive</div></div>');
+var fb=A.fbCover({done:4})+'<div class="sz" style="left:105px;top:0;width:640px;height:315px;border-color:rgba(255,255,255,.35)"></div>';
+HG.mount('#fbli','<div>'+HG.ab(851,315,560/851,fb)+'<div class="hg-cap"><b>Facebook cover</b> 851 × 315 · dashed = mobile crop</div></div><div>'+HG.ab(1584,396,560/1584,A.liCover({done:4}))+'<div class="hg-cap"><b>LinkedIn cover</b> 1584 × 396 · English lead, factual line from the territories (§3, §26) · keep the avatar corner calm</div></div>');
+var av=function(sz){ return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:9999px;overflow:hidden;position:relative;background:var(--brand-blue)">'+HG.portrait({photo:'p2',cut:true,w:sz,h:sz,head:.5,top:.12,cx:.5,box:false})+'</div>'; };
+var phone='<div class="phone"><div style="display:flex;gap:14px;align-items:center">'+av(64)+'<div><div style="font-weight:700;font-size:14px">حسام جعران</div><div class="mono" style="font-size:10px;color:var(--grey-400);margin-top:4px">@GOURAAN</div></div></div><div style="font-size:12px;line-height:1.7;margin-top:12px;color:var(--grey-200)">Builder · Operator · Researcher<br>100 حلقة · كل خميس 8 م على يوتيوب</div><div class="grid" id="ig"></div></div>';
+HG.mount('#prof','<div>'+av(160)+'<div class="hg-cap"><b>All avatars</b> 800 × 800 · the face</div></div><div>'+av(110)+'<div class="hg-cap"><b>Facebook</b></div></div><div>'+av(80)+'<div class="hg-cap"><b>LinkedIn</b></div></div><div>'+phone+'<div class="hg-cap"><b>Instagram profile</b> · bio is factual, not a slogan</div></div>');
+var cell=function(inner){ return HG.ab(1080,1440,76/1080,inner); };
+var T=function(t,c){ return '<div class="f '+c+'" style="left:0;right:0"></div><div class="'+(c=='f-blue'?'on-blue':'')+'" style="position:absolute;right:70px;left:70px;top:540px"><h1 class="d" style="font-size:170px;line-height:1.2">'+t+'</h1></div>'; };
+HG.mount('#ig', cell(HG.portrait({photo:'p1',w:1080,h:1440,head:.4,top:.14,cx:.45})+'<div class="f f-black" style="top:880px;left:0;right:0"></div><div style="position:absolute;right:70px;top:930px"><h1 class="d" style="font-size:140px">الـBottleneck</h1></div>')
+ + cell(T('ارسم<br>الـworkflow','f-blue')) + cell(T('المكتب<br>مش غلط','f-black'))
+ + cell(T('راجعت<br>إيه؟','f-navy')) + cell(HG.portrait({photo:'p3',w:1080,h:1440,head:.3,top:.2,cx:.6})) + cell(T('100<br>حلقة','f-blue'))
+ + cell(T('السؤال<br>الجاي','f-black')) + cell(T('Revised','f-blue').replace('class="d"','class="en"')) + cell(HG.portrait({photo:'p2',w:1080,h:1440,head:.3,top:.18,cx:.5})));
+</script>
+</body>
+</html>

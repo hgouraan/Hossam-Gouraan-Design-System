@@ -1,0 +1,128 @@
+<!-- @dsCard page group="00 Architecture" height=2769 width=1200 subtitle="V2 audit against the source-of-truth strategy: what stays, what moves to Season 01, what changes, what was missing" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Architecture audit</title><style>body{margin:0}
+.layers{display:grid;grid-template-columns:1fr;gap:0;margin:6px 0 30px}
+.layer{display:grid;grid-template-columns:70px 300px 1fr;align-items:stretch;border-top:1px solid var(--rule)}
+.layer .n{font-family:var(--font-en-display);font-stretch:87.5%;font-weight:800;font-size:40px;padding:18px 0;color:var(--accent-ink)}
+.layer .t1{padding:20px 20px 20px 0}
+.layer .t1 b{display:block;font-size:19px;margin-bottom:4px}
+.layer .t1 span{font-size:12.5px;color:var(--ink-muted);line-height:1.5}
+.layer .bar{display:flex;align-items:center;padding:14px 0}
+.chip{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;display:inline-block;line-height:1;white-space:nowrap}
+.c-m{background:var(--brand-blue);color:var(--white)}
+.c-sh{box-shadow:inset 0 0 0 2px var(--brand-blue);color:var(--accent-ink)}
+.c-s1{background:var(--ink);color:var(--surface)}
+.c-r{box-shadow:inset 0 0 0 2px var(--ink-muted);color:var(--ink)}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl td,.tbl th{border-top:1px solid var(--rule);padding:9px 12px 9px 0;text-align:left;vertical-align:top;color:var(--ink-muted);line-height:1.5}
+.tbl th{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.tbl td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.tbl td:nth-child(2){white-space:nowrap}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:6px 0 30px}
+.four>div{border-top:4px solid var(--brand-blue);padding-top:12px}
+.four>div:nth-child(2){border-color:var(--ink)}
+.four>div:nth-child(3){border-color:var(--ink-muted)}
+.four>div:nth-child(4){border-top-style:dashed}
+.four h3{font-family:var(--font-en-display);font-stretch:87.5%;font-weight:800;font-size:24px;margin:0 0 10px;letter-spacing:-.01em}
+.four ul{margin:0;padding:0;list-style:none;font-size:12.5px;line-height:1.5;color:var(--ink-muted)}
+.four li{padding:6px 0;border-top:1px solid var(--rule)}
+.four li b{color:var(--ink);font-weight:600}
+.flag{border:1px solid var(--rule);padding:16px 18px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--ink-muted)}
+.flag b{color:var(--ink)}
+.src{font-family:var(--font-mono);font-size:10.5px;color:var(--accent-ink);letter-spacing:.04em}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">00 — Architecture audit · V2</div>
+  <h2 class="hg-h">V1 made Season 01 look like the whole brand. V2 separates the two.</h2>
+  <p class="hg-p">V1 was designed from the season brief, and it turned "breaking assumptions" into Hossam's permanent positioning, voice and main graphic gesture. The strategy documents say otherwise. The master brand is a long-term media asset built around a person and a 100-episode journey. The positioning is intentionally not written yet: <i>"The answer should be earned through the body of work"</i> (Master Strategy §27). Season 01 is one testable chapter (§26). V2 keeps every visual decision that is still valid and moves the rest into layers.</p>
+
+  <div class="hg-kicker">The architecture</div>
+  <div class="layers">
+    <div class="layer"><div class="n">01</div><div class="t1"><b>Hossam Gouraan · master identity</b><span>Permanent. Survives every season, topic and platform.</span></div><div class="bar" id="L1"></div></div>
+    <div class="layer"><div class="n">02</div><div class="t1"><b>Master content language</b><span>The reusable toolkit for the whole 100-episode journey.</span></div><div class="bar" id="L2"></div></div>
+    <div class="layer"><div class="n">03</div><div class="t1"><b>Season layer</b><span>A fixed slot. Each season fills it differently; the slot itself never changes.</span></div><div class="bar" id="L3"></div></div>
+    <div class="layer"><div class="n">04</div><div class="t1"><b>Season 01 · تكسير المسلّمات</b><span>Episodes 01–20. Temporary. Sits on top of the master identity and never replaces it.</span></div><div class="bar" id="L4"></div></div>
+  </div>
+
+  <div class="four">
+    <div><h3>What stays</h3><ul>
+      <li><b>Colour</b>: #2047F4 / #0A1748 / #000000 + tones (locked).</li>
+      <li><b>Type</b>: Thmanyah Sans display, Plex Arabic, Archivo, Plex Sans/Mono.</li>
+      <li><b>Photography</b>: black T-shirt, blue world, real portraits.</li>
+      <li><b>Name signature</b> حسام جعران■, no logo.</li>
+      <li><b>The Field</b> and the vertical seam.</li>
+      <li><b>The Index Tab</b> (new content, see below).</li>
+      <li><b>Grid</b>, margins, safe zones, 12 columns.</li>
+      <li><b>Thumbnail architecture</b> A / B / C.</li>
+      <li><b>Motion principles</b>: cut, wipe, unmask.</li>
+      <li><b>No icon set.</b></li>
+    </ul></div>
+    <div><h3>Moves to Season 01</h3><ul>
+      <li><b>The Strike</b> and the <b>broken Strike</b>: the season's gesture, no longer a master device.</li>
+      <li>"Show the assumption, then cross it out" as a headline formula.</li>
+      <li>تكسير المسلّمات lockup, S01 markers, #تكسير_المسلمات.</li>
+      <li>"مستوحاة من أحداث حقيقية" tag.</li>
+      <li>Strike-draw motion (420 ms) as the season's emphasis move.</li>
+      <li>The four-question progression of the season.</li>
+    </ul></div>
+    <div><h3>What changes</h3><ul>
+      <li><b>Tagline removed</b>: "أبني، أجرّب، وأسأل عن المسلّمات" / "question the obvious" were season ideas presented as identity.</li>
+      <li><b>Voice rule</b>: natural Egyptian Arabic + professional English. V1's "MSA for titles" contradicts Audience §8 / Voice §4.</li>
+      <li><b>Square Stop</b> re-meant: from "said, decided" to one unit of the journey. Hossam doesn't give final answers (§6).</li>
+      <li><b>Index Tab</b> leads with the journey count (04 / 100); the season prefix is optional.</li>
+      <li><b>Covers + website</b> lead with name, role, journey and schedule.</li>
+      <li><b>Sample copy</b> rewritten from the Voice Guide. AI-pattern lines and a made-up statistic removed.</li>
+      <li><b>Correction card</b> becomes the <b>Revised</b> card.</li>
+    </ul></div>
+    <div><h3>Missing from master</h3><ul>
+      <li><b>The 100 Journey</b>: counter + 5×20 grid (§2, §12, §18).</li>
+      <li><b>The Mark</b>: a master emphasis device to replace the Strike.</li>
+      <li><b>Evidence language</b>: source bar, document excerpt, table, diagram, screen frame (§11; Audience §18; Production §13, §26).</li>
+      <li><b>Revised marker</b>: thinking may change (§6, §18).</li>
+      <li><b>Library navigation</b>: next question, related episode (YouTube Philosophy §28; Distribution §32).</li>
+      <li><b>Counterexample prompt</b> (Voice §31; Distribution §24).</li>
+      <li><b>Season slot spec</b> so Season 02 can differ.</li>
+      <li><b>Core vs extra content</b> rule (§21).</li>
+      <li><b>Home-set bridge</b> for the talking head (Production §6–7).</li>
+    </ul></div>
+  </div>
+
+  <div class="hg-kicker">Decision-by-decision classification</div>
+  <table class="tbl">
+    <tr><th>Decision (V1)</th><th>Class</th><th>Why — source</th><th>V2</th></tr>
+    <tr><td>Positioning line "أبني، أجرّب، وأسأل عن المسلّمات"</td><td><span class="chip c-r">Reconsider</span></td><td>Master §26–27: the hypothesis "is not a permanent identity statement"; the answer is earned. The question language is Season 01's (§14).</td><td>No master tagline. Name + role (Builder · Operator · Researcher, §6) + the journey.</td></tr>
+    <tr><td>English "I build, test and question the obvious"</td><td><span class="chip c-r">Reconsider</span></td><td>Same as above.</td><td>LinkedIn: name, role, "100 weekly episodes on work, business, systems and decisions" (territories, §3 / §26).</td></tr>
+    <tr><td>Personality trait "slightly unconventional — the Strike"</td><td><span class="chip c-s1">Season 01</span></td><td>Voice §2 keeps "comfortable questioning common assumptions" as a trait, but the crossing-out gesture is the season's framing.</td><td>Questioning = master voice behaviour. Strike = S01 gesture.</td></tr>
+    <tr><td>Voice: MSA for season titles / website</td><td><span class="chip c-r">Reconsider</span></td><td>Audience §8, Voice §4–5: natural Egyptian Arabic, no artificial MSA, regionally understandable.</td><td>Egyptian base + professional English (workflow, system, AI). Clear enough for the Gulf.</td></tr>
+    <tr><td>Name signature + Square Stop</td><td><span class="chip c-m">Master</span></td><td>The person is the asset (§1). "Final word" meaning conflicts with §6.</td><td>Kept. The square = one episode, one unit of the journey.</td></tr>
+    <tr><td>Colour · Type · Photography</td><td><span class="chip c-m">Master</span></td><td>Locked by you; nothing in the strategy ties them to a season.</td><td>Unchanged. Photography adds a set bridge.</td></tr>
+    <tr><td>The Field (primary)</td><td><span class="chip c-m">Master</span></td><td>Pure form, season-neutral; supports "clean, sustainable" production (Production §36).</td><td>Unchanged.</td></tr>
+    <tr><td>Index Tab (secondary)</td><td><span class="chip c-sh">Shared</span></td><td>The form is master; V1 filled it with S01 codes.</td><td>Master content = journey count <b>04 / 100</b>; season adds a prefix <b>S01 ·</b>.</td></tr>
+    <tr><td>The Strike / broken Strike (supporting)</td><td><span class="chip c-s1">Season 01</span></td><td>It is literally the act of breaking an assumption: §14's season job.</td><td>Master supporting device becomes <b>the Mark</b>.</td></tr>
+    <tr><td>Grid, safe zones, hierarchy</td><td><span class="chip c-m">Master</span></td><td>Structural.</td><td>L05 now carries the journey count.</td></tr>
+    <tr><td>Thumbnail A / B / C</td><td><span class="chip c-m">Master</span></td><td>Architecture is season-free; examples used the Strike.</td><td>Master examples use the Mark; the S01 variant adds the Strike + S01 prefix.</td></tr>
+    <tr><td>Titles as statements, not literal questions</td><td><span class="chip c-sh">Shared</span></td><td>Adopted for S01 from research (Final Decision §1–2). Evidence isn't season-specific.</td><td>Master default; a season may argue otherwise.</td></tr>
+    <tr><td>Video graphics A–N</td><td><span class="chip c-m">Master</span></td><td>YouTube Philosophy §6, §22: visuals must do a job.</td><td>Kept, plus an evidence set. "Correction" → <b>Revised</b>. The fake "90%" becomes a placeholder.</td></tr>
+    <tr><td>Motion emphasis = Strike draw</td><td><span class="chip c-s1">Season 01</span></td><td>Follows the device.</td><td>Master emphasis = Mark sweep + Field expansion. Achievable in CapCut / Premiere (Production §10).</td></tr>
+    <tr><td>Season opener (4 s)</td><td><span class="chip c-sh">Shared</span></td><td>The structure is reusable; the content is S01's.</td><td>Master structure: black → season gesture → Field → Hossam.</td></tr>
+    <tr><td>Covers, website hero</td><td><span class="chip c-r">Reconsider</span></td><td>Carried the tagline and a تكسير المسلّمات nav link.</td><td>Name, role, journey grid, schedule; nav links to "المواسم" (seasons).</td></tr>
+    <tr><td>Hashtag / "مستوحاة من أحداث حقيقية"</td><td><span class="chip c-s1">Season 01</span></td><td>From your brief; not in the strategy docs.</td><td>S01 options only.</td></tr>
+    <tr><td>Sample copy</td><td><span class="chip c-r">Reconsider</span></td><td>Some lines hit Voice §32 red flags; "90% of startups" was invented (breaks Master §11).</td><td>Rewritten from Voice Guide / YouTube Philosophy examples; data shown as placeholders.</td></tr>
+  </table>
+
+  <div class="hg-kicker" style="margin-top:30px">Flags for Hossam</div>
+  <div class="flag"><b>1 · Season name.</b> Master Strategy §14 and the Final Decision name Season 01 <b>"فكّ المسلّمات"</b>. Your brief says <b>"تكسير المسلّمات"</b>. V2 keeps your spelling. The two verbs differ: <i>فكّ</i> is untangling (investigative, closer to the editorial chain), while <i>تكسير</i> is smashing. The Strike fits تكسير. If the season is فكّ, the season gesture could become something that "unties" rather than crosses out. This is the only decision that can't be derived from the documents, and it only affects layer 04.</div>
+  <div class="flag"><b>2 · Photo world vs recording set.</b> Production Capabilities §6–7: home set, two softboxes (white/warm), warm practical lamp, no RGB. The portraits are blue-backdrop studio shots. The talking-head frame won't look like the thumbnails unless the set has a blue element. V2 designs video graphics to work over any background (solid Fields). A blue wall or paper backdrop behind the chair is suggested as an <b>OPTIONAL PRODUCTION UPGRADE</b>, not assumed.</div>
+  <div class="flag"><b>3 · Schedule used on covers.</b> Covers show "كل خميس · 8 م بتوقيت القاهرة" and launch 8 October 2026 (Distribution §36). That's a V1 test to review after 8–10 episodes, so treat the line as editable.</div>
+</div>
+<script>
+var chip=function(c,t){return '<span class="chip '+c+'" style="margin:0 6px 6px 0">'+t+'</span>';};
+HG.mount('#L1',chip('c-m','Name')+chip('c-m','Photography')+chip('c-m','Colour')+chip('c-m','Type')+chip('c-m','Field')+chip('c-m','Index Tab')+chip('c-m','Square unit')+chip('c-m','100 Journey'));
+HG.mount('#L2',chip('c-m','Thumbnails A/B/C')+chip('c-m','The Mark')+chip('c-m','Evidence set')+chip('c-m','Video cards')+chip('c-m','Motion')+chip('c-m','Social')+chip('c-m','Covers')+chip('c-m','Web'));
+HG.mount('#L3',chip('c-sh','Season name')+chip('c-sh','One gesture')+chip('c-sh','Sxx prefix')+chip('c-sh','Row in the grid')+chip('c-sh','Opener content')+chip('c-sh','Cover'));
+HG.mount('#L4',chip('c-s1','تكسير المسلّمات')+chip('c-s1','The Strike')+chip('c-s1','S01 · 01–20')+chip('c-s1','4 questions')+chip('c-s1','#تكسير_المسلمات'));
+</script>
+</body>
+</html>

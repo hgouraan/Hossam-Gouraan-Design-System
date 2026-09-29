@@ -1,0 +1,47 @@
+<!-- @dsCard page group="05 System" height=1231 width=1200 subtitle="Shown, not listed: the same message done right and wrong" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Do and don't</title><style>body{margin:0}
+.pair{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 18px}
+.lab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.5;color:var(--ink-muted)}
+.lab b{color:var(--ink);font-weight:600}
+.y::before,.n::before{content:"";flex:none;width:10px;height:10px;margin-top:3px}
+.bad-glow{filter:drop-shadow(0 0 30px #5B78FF)}
+.bad-flip{transform:scaleX(-1);filter:saturate(1.6) contrast(1.4) blur(.6px)}
+.y::before{background:var(--brand-blue)}
+.n::before{background:transparent;border:2px solid var(--grey-400);width:6px;height:6px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">05 — System · do / don't</div>
+  <h2 class="hg-h">Discipline is the identity.</h2>
+  <p class="hg-p">Each pair says the same thing. Left: the system. Right: what happens when it is "improved".</p>
+  <div class="pair" id="p"></div>
+</div>
+<script>
+var S=265/1280, ab=function(x){ return HG.ab(1280,720,S,x); };
+var D=[
+ [HG.thumb({tpl:'A',photo:'p1',field:'black',lines:['شركتك مش محتاجة','<span class="mk">موظفين أكتر</span>']}),'<b>DO</b> a statement from the episode, huge, one Mark',
+  '<div class="f f-black" style="left:0;right:0"></div>'+HG.portrait({photo:'p1',w:420,h:720,head:.4,top:.14,cx:.5})+'<div style="position:absolute;right:30px;width:780px;top:40px"><h1 class="d" style="font-size:60px;line-height:1.3">السر اللي أصحاب الشركات مش عايزينك تعرفه عن التعيين في ٥ خطوات!</h1><div class="t" style="font-size:30px;margin-top:20px">#بيزنس #ريادة_أعمال #نجاح</div></div>','<b>DON\'T</b> manufactured stakes (Voice §17), tiny text, hashtags'],
+ [HG.thumb({tpl:'B',photo:'p2',field:'blue',lines:['ارسم','<span class="mk">الـworkflow</span> الأول']}),'<b>DO</b> flat Field, hard seam',
+  '<div class="f" style="left:0;right:0;background:radial-gradient(circle at 70% 30%,#5B78FF,#0A1748 70%)"></div>'+HG.portrait({photo:'p2',cut:true,w:1280,h:720,head:.45,top:.1,cx:.78,box:false,cls:'bad-glow'})+'<div style="position:absolute;right:560px;top:230px"><h1 class="d" style="font-size:120px;text-shadow:0 0 30px #5B78FF, 0 6px 0 #000">ابنِ نظامًا</h1></div>','<b>DON\'T</b> gradients, glow, outlines — even in brand blue'],
+ [HG.thumb({tpl:'C',photo:'p3',lines:['إنت بقيت','الـBottleneck']}),'<b>DO</b> real photo, human, calm',
+  '<div class="f f-navy" style="left:0;right:0"></div><div style="position:absolute;left:80px;top:120px;width:480px;height:480px;border:3px solid #5B78FF;box-shadow:0 0 60px #2047F4 inset;"></div><div style="position:absolute;left:180px;top:220px;width:280px;height:280px;border-radius:9999px;background:repeating-linear-gradient(90deg,#2047F4 0 4px,transparent 4px 12px)"></div><div style="position:absolute;right:60px;top:240px"><h1 class="d" style="font-size:120px">مستقبل<br>الذكاء</h1></div>','<b>DON\'T</b> AI/cyber imagery, circuits, robots'],
+ [HG.thumb({tpl:'A',photo:'p3',field:'black',lines:['المكتب','<span class="mk">مش غلط</span>'],tab:'12 / 100'}),'<b>DO</b> master content: Mark + journey count, no season gesture',
+  HG.thumb({tpl:'A',photo:'p3',field:'black',lines:['<span class="s">المكتب</span>','<span class="s brk hi">مش غلط</span>'],tab:'12 / 100'})+'<div style="position:absolute;right:48px;bottom:30px;font-size:22px;display:flex;gap:10px"><span class="otag" style="color:#fff">مستوحاة من أحداث حقيقية</span><span class="tab b">#تكسير_المسلمات</span></div><div style="position:absolute;left:600px;top:48px;font-size:22px"><span class="tab w">حسام جعران</span></div>','<b>DON\'T</b> Season 01\'s Strike on master content, and every marker at once'],
+ ['<div class="f f-black" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:560,h:720,head:.5,top:.1,cx:.5})+'<div class="f f-blue" style="right:0;width:720px"></div><div class="on-blue" style="position:absolute;right:48px;bottom:92px"><h1 class="d" style="font-size:150px">صورة<br>حقيقية</h1></div>','<b>DO</b> the real face, as shot',
+  '<div class="f f-black" style="left:0;right:0"></div>'+HG.portrait({photo:'p2',w:560,h:720,head:.5,top:.1,cx:.5,cls:'bad-flip'})+'<div class="f f-blue" style="right:0;width:720px"></div><div class="on-blue" style="position:absolute;right:48px;bottom:92px"><h1 class="d" style="font-size:150px">صورة<br>مفلترة</h1></div>','<b>DON\'T</b> flip, smooth, over-grade'],
+ ['<div class="f f-blue" style="left:0;right:0"></div><div class="on-blue" style="position:absolute;right:48px;bottom:92px;width:760px"><h1 class="d" style="font-size:130px">راجعت<br>إيه الأول؟</h1></div>','<b>DO</b> asymmetric, hanging from the right',
+  '<div class="f f-blue" style="left:0;right:0"></div><div style="position:absolute;left:0;right:0;top:200px;text-align:center"><h1 class="d" style="font-size:80px;text-align:center;font-weight:400;font-style:italic">✨ اسأل نفسك دائمًا: ماذا لن تفعل؟ ✨</h1><div class="t" style="font-size:36px;margin-top:30px">💡 حكمة اليوم 💡</div></div>','<b>DON\'T</b> centred motivational quote, emoji'],
+ ['<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:48px;bottom:92px"><h1 class="d" style="font-size:150px">نظام<br><span class="hi">لا بطل</span></h1></div>','<b>DO</b> blue + black only',
+  '<div class="f" style="left:0;right:0;background:#0B0B0D"></div><div class="f" style="left:0;width:420px;background:#8C8F98"></div><div style="position:absolute;right:48px;bottom:92px"><h1 class="d" style="font-size:150px;color:#B9C6FF">نظام<br><span style="color:#5A5D66">لا بطل</span></h1></div>','<b>DON\'T</b> greys and tints as the main event'],
+ ['<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;right:48px;bottom:92px"><div class="d" style="font-size:90px">حسام جعران<span class="stop"></span></div></div>','<b>DO</b> the name is the mark',
+  '<div class="f f-black" style="left:0;right:0"></div><div style="position:absolute;left:520px;top:180px;width:220px;height:220px;border-radius:9999px;border:10px solid var(--brand-blue);display:flex;align-items:center;justify-content:center"><span class="en" style="font-size:110px">HG</span></div><div class="en" style="position:absolute;left:0;right:0;bottom:120px;text-align:center;font-size:40px;letter-spacing:.3em;font-weight:400">HG CONSULTING</div>','<b>DON\'T</b> monograms, badges, "consulting" logos'],
+ ['<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="right:0;width:640px"></div><div class="on-blue" style="position:absolute;right:48px;top:150px"><div class="d" style="font-size:96px">حسام جعران<span class="stop"></span></div><div class="mono" style="font-size:22px;margin-top:16px;text-align:right;color:var(--white)">BUILDER · OPERATOR · RESEARCHER</div><div style="margin-top:40px;display:flex;justify-content:flex-end">'+HG.journey({done:4,cell:18,gap:7,ground:'blue'})+'</div></div>'+HG.portrait({photo:'p3',w:640,h:720,head:.44,top:.14,cx:.55}),'<b>DO</b> covers: name, role, journey',
+  '<div class="f f-black" style="left:0;right:0"></div><div class="f f-blue" style="right:0;width:640px"></div><div class="on-blue" style="position:absolute;right:48px;top:120px"><h1 class="d" style="font-size:110px;line-height:1.15">تكسير<br><span class="s brk">المسلّمات</span></h1><div class="t" style="font-size:34px;font-weight:700;margin-top:20px">أبني، أجرّب، وأسأل</div></div>'+HG.portrait({photo:'p3',w:640,h:720,head:.44,top:.14,cx:.55}),'<b>DON\'T</b> a season or tagline as the channel identity'],
+];
+var h=''; D.forEach(function(d){ h+='<div>'+ab(d[0])+'<div class="lab y">'+d[1]+'</div></div><div>'+ab(d[2])+'<div class="lab n">'+d[3]+'</div></div>'; });
+HG.mount('#p',h);
+</script>
+</body>
+</html>

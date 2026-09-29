@@ -1,0 +1,64 @@
+<!-- @dsCard page group="02 Master Content Language" height=1225 width=1200 subtitle="Fast · Normal · Emphasis — cuts, wipes from the seam, mask reveals, the Strike draw" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Motion</title><style>body{margin:0}
+.tier{display:grid;grid-template-columns:230px 1fr;gap:24px;border-top:1px solid var(--rule);padding:20px 0}
+.tier h3{font-family:var(--font-en-display);font-stretch:87.5%;font-weight:800;font-size:30px;margin:2px 0 6px}
+.tier .ms{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;color:var(--accent-ink)}
+.strip{display:flex;gap:8px;align-items:flex-start}
+.strip .hg-cap{font-size:9.5px;max-width:200px}
+.live{margin-top:6px}
+@keyframes wipe{0%{transform:scaleX(0)}40%,100%{transform:scaleX(1)}}
+@keyframes reveal{0%,20%{clip-path:inset(0 0 100% 0)}50%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes mark{0%,45%{background-size:0% 100%}75%,100%{background-size:100% 100%}}
+.demo{position:relative;width:340px;height:191px;background:var(--black);overflow:hidden;direction:rtl}
+.demo .fld{position:absolute;top:0;bottom:0;right:0;width:62%;background:var(--brand-blue);transform-origin:right;animation:wipe 2.4s cubic-bezier(.2,0,0,1) infinite}
+.demo .txt{position:absolute;right:18px;bottom:30px;font-family:var(--font-ar-display);font-weight:900;font-size:40px;line-height:1.1;color:#fff;animation:reveal 2.4s cubic-bezier(.2,0,0,1) infinite}
+.demo .txt .mk2{background:linear-gradient(var(--black),var(--black)) no-repeat right/0% 100%;padding:0 .1em;animation:mark 2.4s cubic-bezier(.2,0,0,1) infinite}
+@media (prefers-reduced-motion:reduce){.demo *{animation:none!important}.demo .txt .mk2{background-size:100% 100%}}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · motion</div>
+  <h2 class="hg-h">Editing, not animating.</h2>
+  <p class="hg-p">Motion behaves like a confident editor: hard cuts, straight wipes that start from the seam, text that unmasks line by line, and one slow, deliberate gesture: the Mark sweeping in behind the word that matters. Everything is achievable in Premiere or CapCut (Production §10, §23); After Effects is never required. Arabic moves right → left (reading direction). Everything eases with <code>ease-snap</code> cubic-bezier(0.2, 0, 0, 1). No bounce, no overshoot, no 3D, no motion blur, no glitch.</p>
+
+  <div style="display:flex;gap:24px;align-items:center;margin-bottom:18px">
+    <div class="demo"><div class="fld"></div><div class="txt">إنت بقيت<br><span class="mk2">الـBottleneck</span></div></div>
+    <ul class="hg-spec" style="width:560px"><li><b>Live loop</b> — Field wipe (240 ms) → line mask reveal (240 ms, 80 ms stagger) → Mark sweep (420 ms) → hold.</li><li><b>Exit</b> is always faster than entrance: hard cut, or 120 ms with ease-exit.</li><li><b>Reduced motion</b> — every graphic has a static end state that works as a hard cut.</li></ul>
+  </div>
+
+  <div class="tier"><div><div class="ms">DUR-FAST · 120 MS</div><h3>Fast</h3><ul class="hg-spec"><li>Index Tab, labels, source lines, lower-third text, exits.</li><li>Hard cut on the beat of speech for keyword emphasis.</li></ul></div><div class="strip" id="fast"></div></div>
+  <div class="tier"><div><div class="ms">DUR-NORMAL · 240 MS</div><h3>Normal</h3><ul class="hg-spec"><li>Field wipes from the seam edge; full-screen card transitions; lower-third block growth.</li><li>Text reveals by line mask, 80 ms stagger, bottom edge first.</li></ul></div><div class="strip" id="normal"></div></div>
+  <div class="tier"><div><div class="ms">DUR-EMPHASIS · 420 MS</div><h3>Emphasis</h3><ul class="hg-spec"><li>The Mark sweeping in behind the key word, right → left.</li><li><b>Season slot:</b> a season may swap this one move for its gesture. S01 draws the Strike (see Season 01).</li><li>Field expanding from 44 % to 100 % to turn a talking head into a card.</li><li>Max one emphasis move per minute of video.</li></ul></div><div class="strip" id="emph"></div></div>
+</div>
+<script>
+var W=1920,H=1080,s=160/1920;
+var fr=function(list,id){ var h=''; list.forEach(function(f){ h+='<div>'+HG.ab(W,H,s,f[1])+'<div class="hg-cap">'+f[0]+'</div></div>'; }); HG.mount(id,h); };
+var head=HG.portrait({photo:'p2',w:W,h:H,head:.42,top:.14,cx:.34});
+fr([
+ ['0 ms · talking head',head],
+ ['CUT · keyword on',head+'<div style="position:absolute;right:96px;top:420px;background:var(--brand-blue);padding:10px 34px 24px"><h1 class="d" style="font-size:110px">الـBottleneck</h1></div>'],
+ ['+120 ms · source line',head+'<div style="position:absolute;right:96px;top:420px;background:var(--brand-blue);padding:10px 34px 24px"><h1 class="d" style="font-size:110px">الـBottleneck</h1></div><div style="position:absolute;right:96px;bottom:96px;background:var(--black);padding:16px 24px"><span class="mono" style="font-size:22px;color:var(--brand-blue-bright)">SOURCE</span></div>'],
+ ['CUT · off',head],
+ ['END · hard cut',head]
+],'#fast');
+fr([
+ ['0 ms',head],
+ ['80 ms · Field enters from right edge',head+'<div class="f f-blue" style="right:0;width:380px"></div>'],
+ ['240 ms · Field at seam',head+'<div class="f f-blue" style="right:0;width:1060px"></div>'],
+ ['320 ms · line 1 unmasks',head+'<div class="f f-blue" style="right:0;width:1060px"></div><div class="on-blue" style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:140px">المشكلة مش إن</h1></div>'],
+ ['400 ms · line 2',head+'<div class="f f-blue" style="right:0;width:1060px"></div><div class="on-blue" style="position:absolute;right:96px;top:380px"><h1 class="d" style="font-size:140px">المشكلة مش إن<br>عندك قرارات كتير</h1></div>']
+],'#normal');
+var bl='<div class="f f-black" style="left:0;right:0"></div>';
+var t=function(w){ return '<div style="position:absolute;right:96px;top:360px"><h1 class="d" style="font-size:180px;line-height:1.25">إنت بقيت<br><span style="background:linear-gradient(var(--brand-blue),var(--brand-blue)) no-repeat right/'+w+'% 100%;padding:0 .12em">الـBottleneck</span></h1></div>'; };
+fr([
+ ['0 ms · line on screen',bl+t(0)],
+ ['140 ms · Mark sweeps ←',bl+t(35)],
+ ['280 ms',bl+t(70)],
+ ['420 ms · complete',bl+t(100)],
+ ['HOLD · then cut',bl+t(100)]
+],'#emph');
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- @dsCard page group="02 Master Content Language" height=1273 width=1200 subtitle="Five levels that translate across thumbnail, video, carousel, web, social — and why there are no icons" -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../../project/components/bundle.css"><script src="../bundle.local.js"></script><style>html,body{background:var(--surface)}</style><meta charset="utf-8"><title>Information hierarchy</title><style>body{margin:0}
+.lv{width:100%;border-collapse:collapse;font-size:12.5px}
+.lv td,.lv th{border-top:1px solid var(--rule);padding:10px 12px 10px 0;text-align:left;vertical-align:middle;color:var(--ink-muted);line-height:1.45}
+.lv th{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.lv td:first-child{white-space:nowrap}
+.glyphs{display:flex;gap:14px;margin-top:10px}
+.glyphs div{width:130px;height:130px;background:var(--black);border:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--white)}
+.glyphs .g{font-size:52px;line-height:1}
+.glyphs .n{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;color:var(--grey-400);text-align:center;padding:0 8px}
+</style></head>
+<body>
+<div class="hg-board">
+  <div class="hg-kicker">02 — Content language · hierarchy</div>
+  <h2 class="hg-h">Five levels, everywhere.</h2>
+  <p class="hg-p">Each level has one typeface, one job and a fixed place. A piece may skip levels (thumbnails use only L01 + L05) but never reorders them.</p>
+  <div id="stack" style="margin-bottom:22px"></div>
+  <table class="lv">
+    <tr><th>Level</th><th>Style</th><th>Thumbnail</th><th>Video</th><th>Carousel</th><th>Website</th><th>Social</th></tr>
+    <tr><td style="color:var(--ink)"><b>L01</b> Big idea / hook</td><td>ar-hero / ar-display · 900</td><td>2–6 words</td><td>Statement, question</td><td>Slide 01 + 03</td><td>Hero statement</td><td>Headline</td></tr>
+    <tr><td style="color:var(--ink)"><b>L02</b> Supporting idea</td><td>ar-title 800 / ar-subtitle 700</td><td>—</td><td>Chapter title</td><td>Slide titles</td><td>Section titles</td><td>Sub-line</td></tr>
+    <tr><td style="color:var(--ink)"><b>L03</b> Context</td><td>ar-lead / ar-body</td><td>—</td><td>Definition text</td><td>Context slide</td><td>Body</td><td>Caption text</td></tr>
+    <tr><td style="color:var(--ink)"><b>L04</b> Metadata</td><td>meta (mono) / ar-caption</td><td>—</td><td>Lower third role</td><td>Footer</td><td>Dates, read time</td><td>Handle row</td></tr>
+    <tr><td style="color:var(--ink)"><b>L05</b> Source / episode / label</td><td>Index Tab · otag · meta</td><td>Index Tab</td><td>SOURCE bar, 04 / 100</td><td>02 / 06</td><td>Episode link</td><td>Tab</td></tr>
+  </table>
+
+  <hr class="hg-sep" style="margin-top:26px">
+  <div class="hg-kicker">15 — Iconography</div>
+  <h2 class="hg-h" style="font-size:28px">No icon set. On purpose.</h2>
+  <p class="hg-p">Icons would pull the brand toward corporate decks and SaaS. Photography, type and the four shapes carry the identity. Where a sign is needed, use a typographic glyph from the brand fonts — never a pictogram, never emoji. Platform icons (YouTube, LinkedIn…) appear only where a platform requires them, in white or black, never blue-tinted.</p>
+  <div class="glyphs">
+    <div><span class="g" style="display:block;width:.3em;height:.3em;background:var(--brand-blue)"></span><span class="n">SQUARE STOP · BULLET</span></div>
+    <div><span class="g mono" style="font-size:44px">←</span><span class="n">NEXT (ARABIC SWIPE)</span></div>
+    <div><span class="g d">؟</span><span class="n">QUESTION CARD</span></div>
+    <div><span class="g num" style="font-size:60px;color:var(--brand-blue-bright)">01</span><span class="n">STEPS / ORDER</span></div>
+    <div><span class="g d" style="color:var(--brand-blue-bright)">”</span><span class="n">QUOTE (OTHERS)</span></div>
+  </div>
+</div>
+<script>
+var st='<div class="f f-black" style="left:0;right:0"></div>'
+ + '<div style="position:absolute;right:96px;top:96px;font-size:26px"><span class="tab b">04 / 100</span></div>'
+ + '<div class="mono" style="position:absolute;left:96px;top:104px;font-size:20px;color:var(--grey-400)">L05</div>'
+ + '<div style="position:absolute;right:96px;top:230px"><h1 class="d" style="font-size:150px">شركتك مش محتاجة <span class="mk">موظفين أكتر</span></h1></div><div class="mono" style="position:absolute;left:96px;top:300px;font-size:20px;color:var(--grey-400)">L01</div>'
+ + '<div style="position:absolute;right:96px;top:450px"><div class="d8" style="font-size:60px">قبل ما تنزل Job Post جديد</div></div><div class="mono" style="position:absolute;left:96px;top:470px;font-size:20px;color:var(--grey-400)">L02</div>'
+ + '<div style="position:absolute;right:96px;top:570px;width:1100px"><p class="t" style="font-size:28px;line-height:1.75;color:var(--grey-200)">ممكن فعلًا تكون محتاج تعيّن. بس فيه سؤال أهم لازم يتسأل الأول.</p></div><div class="mono" style="position:absolute;left:96px;top:590px;font-size:20px;color:var(--grey-400)">L03</div>'
+ + '<div style="position:absolute;right:96px;top:700px;display:flex;gap:30px;align-items:center"><span class="mono" style="font-size:22px;color:var(--grey-400)">14 MIN · 08.10.2026</span><span class="t" style="font-size:22px;font-weight:600;color:var(--brand-blue-bright)">حلقة مرتبطة: 02 / 100</span></div><div class="mono" style="position:absolute;left:96px;top:704px;font-size:20px;color:var(--grey-400)">L04</div>';
+HG.mount('#stack',HG.ab(1920,820,1136/1920,st));
+</script>
+</body>
+</html>
